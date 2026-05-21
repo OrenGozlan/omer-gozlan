@@ -1,0 +1,281 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - button "OMER GOZLAN" [ref=e6] [cursor=pointer]
+      - generic [ref=e7]:
+        - button "אודות" [ref=e8] [cursor=pointer]
+        - button "הישגים" [ref=e9] [cursor=pointer]
+        - button "יעדים 2026" [ref=e10] [cursor=pointer]
+        - button "גלריה" [ref=e11] [cursor=pointer]
+        - button "חסות" [ref=e12] [cursor=pointer]
+        - button "EN" [ref=e13] [cursor=pointer]
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]: 🏐
+      - generic [ref=e20]: כדורעף חופים | נבחרת ישראל
+      - generic [ref=e21]: 🇮🇱
+    - heading "עומר גוזלן" [level=1] [ref=e22]
+    - paragraph [ref=e23]: הכוכב העולה של כדורעף החופים בישראל
+    - generic [ref=e24]:
+      - generic [ref=e25]: אלוף עוקב
+      - generic [ref=e26]: 4 מדליות בינלאומיות
+      - generic [ref=e27]: מכון וינגייט
+    - paragraph [ref=e28]: בגיל 17 בלבד, עומר רושם היסטוריה כאחד הספורטאים הצעירים המבטיחים של ישראל, עם כישרון יוצא דופן המוכר בידי מאמני נבחרת ותוצאות בתחרויות בינלאומיות. בעקבות הצלחה מדהימה בטורנירי בוגרים בתחילת עונת 2026, מיקוד התחרויות של עומר משתנה והוא מתחיל להתמקד בסבב המקצועני לבוגרים — כולל 4 תחרויות מתוכננות בסין, בולגריה, הונגריה ואנגליה. כל זאת בנוסף לתחרויות המטרה בגילאי 18 ו-20.
+    - button "צפו בהישגים" [ref=e29] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]: "17"
+      - generic [ref=e34]: גיל
+    - generic [ref=e35]:
+      - generic [ref=e36]: "#1"
+      - generic [ref=e37]: דירוג ישראל U18
+    - generic [ref=e38]:
+      - generic [ref=e39]: "6"
+      - generic [ref=e40]: מדליות בתחרויות
+    - generic [ref=e41]:
+      - generic [ref=e42]: י"א
+      - generic [ref=e43]: תלמיד
+  - generic [ref=e45]:
+    - heading "אודות עומר" [level=2] [ref=e46]
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - heading "רקע" [level=3] [ref=e49]
+        - paragraph [ref=e50]: עומר גוזלן, בן 17, אחד משחקני כדורעף החופים הצעירים המבטיחים בישראל. שילוב של כישרון, נחישות ואתיקת עבודה — עומר מתקדם במהירות לעבר קריירה ספורטיבית מקצועית.
+      - generic [ref=e51]:
+        - heading "השכלה" [level=3] [ref=e52]
+        - paragraph [ref=e53]: תלמיד י"ב, המכללה למצוינות בספורט, מכון וינגייט. שילוב של אימוני עילית עם מצוינות אקדמית באחד ממוסדות הספורט המובילים בישראל.
+      - generic [ref=e54]:
+        - heading "הכרה ופוטנציאל" [level=3] [ref=e55]
+        - paragraph [ref=e56]: מאמנים ודמויות מובילות בענף מזהים בעומר ספורטאי בעל פוטנציאל יוצא מן הכלל להגיע לרמות הבינלאומיות הגבוהות ביותר. השילוב של כישרון פיזי, חוסן מנטלי ומסירות מציב אותו ככוכב עתידי של הענף.
+  - generic [ref=e58]:
+    - heading "שיא אליפות" [level=2] [ref=e59]
+    - generic [ref=e60]:
+      - heading "עונת 2026" [level=3] [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: "#1"
+          - heading "גביע אומות CEV 2026" [level=4] [ref=e65]
+          - paragraph [ref=e66]: בוגרים — מקום ראשון
+        - generic [ref=e67]:
+          - generic [ref=e68]: "#2"
+          - heading "גביע לאומי הונגריה 2026" [level=4] [ref=e69]
+          - paragraph [ref=e70]: בוגרים — מקום שני
+    - generic [ref=e71]:
+      - heading "עונת 2025" [level=3] [ref=e72]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: "#1"
+          - heading "אליפות ישראל U18 2025" [level=4] [ref=e76]
+          - paragraph [ref=e77]: מקום ראשון
+        - generic [ref=e78]:
+          - generic [ref=e79]: "#5"
+          - heading "אליפות ישראל בוגרים A 2025" [level=4] [ref=e80]
+          - paragraph [ref=e81]: מקום חמישי
+        - generic [ref=e82]:
+          - generic [ref=e83]: "#3"
+          - heading "CEV סלובניה" [level=4] [ref=e84]
+          - paragraph [ref=e85]: מדליית ארד
+        - generic [ref=e86]:
+          - generic [ref=e87]: "#3"
+          - heading "CEV קפריסין" [level=4] [ref=e88]
+          - paragraph [ref=e89]: מדליית ארד
+        - generic [ref=e90]:
+          - generic [ref=e91]: "16"
+          - heading "CEV U20 ספרד" [level=4] [ref=e92]
+          - paragraph [ref=e93]: אליפות אירופה — שמינית גמר
+        - generic [ref=e94]:
+          - generic [ref=e95]: "16"
+          - heading "CEV U18 איטליה" [level=4] [ref=e96]
+          - paragraph [ref=e97]: אליפות אירופה — שמינית גמר
+    - generic [ref=e98]:
+      - heading "עונת 2024" [level=3] [ref=e99]
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - generic [ref=e102]: "#1"
+          - heading "אליפות ישראל U16 2024" [level=4] [ref=e103]
+          - paragraph [ref=e104]: מקום ראשון
+        - generic [ref=e105]:
+          - generic [ref=e106]: "#8"
+          - heading "אליפות ישראל בוגרים B 2024" [level=4] [ref=e107]
+          - paragraph [ref=e108]: מקום שמיני
+        - generic [ref=e109]:
+          - generic [ref=e110]: "#4"
+          - heading "CEV צ׳כיה 2024" [level=4] [ref=e111]
+          - paragraph [ref=e112]: טורניר CEV
+    - paragraph [ref=e113]: מדומיננטיות בתחרויות נוער ועד תחרות ברמות בוגרים אליטיסטיות ואליפויות אירופה. עקביות עומר במגוון קבוצות גיל וטורנירים בינלאומיים מעידה על כישרון יוצא דופן ופוטנציאל להגיע לפסגות הכדורעף המקצועי.
+  - generic [ref=e115]:
+    - heading "יעדי 2026" [level=2] [ref=e116]
+    - paragraph [ref=e117]: חתירה למצוינות בזירות הלאומית, היבשתית והעולמית
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]: לאומי
+        - heading "ישראל U18" [level=3] [ref=e121]
+        - paragraph [ref=e122]: אליפות לאומית
+      - generic [ref=e123]:
+        - generic [ref=e124]: לאומי
+        - heading "ישראל בוגרים A" [level=3] [ref=e125]
+        - paragraph [ref=e126]: אליפות לאומית
+      - generic [ref=e127]:
+        - generic [ref=e128]: יבשתי
+        - heading "אליפות אירופה U18" [level=3] [ref=e129]
+        - paragraph [ref=e130]: טורניר CEV
+      - generic [ref=e131]:
+        - generic [ref=e132]: יבשתי
+        - heading "אליפות אירופה U20" [level=3] [ref=e133]
+        - paragraph [ref=e134]: טורניר CEV
+      - generic [ref=e135]:
+        - generic [ref=e136]: בינלאומי
+        - heading "אליפות עולם U18" [level=3] [ref=e137]
+        - paragraph [ref=e138]: טורניר FIVB
+      - generic [ref=e139]:
+        - generic [ref=e140]: בינלאומי
+        - heading "אליפות עולם U20" [level=3] [ref=e141]
+        - paragraph [ref=e142]: טורניר FIVB
+    - generic [ref=e143]:
+      - generic [ref=e144]: 🏅 המשחקים האולימפיים
+      - heading "אולימפיאדת הנוער דאקאר 2026" [level=3] [ref=e145]
+      - paragraph [ref=e146]: ההישג המרכזי של ספורטאים צעירים ברחבי העולם. ייצוג ישראל בזירה האולימפית ותחרות על הכבוד הגבוה ביותר בספורט הנוער.
+    - paragraph [ref=e147]: "כל תחרות היא אבן דרך לעבר היעד האולטימטיבי של עומר: לתחר ברמות הגבוהות ביותר של כדורעף החופים העולמי ולהביא גאווה לישראל."
+  - generic [ref=e149]:
+    - heading "הכרה מקצועית" [level=2] [ref=e150]
+    - blockquote [ref=e151]: "\"מעולם לא היה תלמיד י\"א עם שתי מדליות אירופאיות. עומר הוא כישרון יוצא דופן — ספורטאי צעיר עם בגרות, התמדה ואמונה בלתי מעורערת בדרכו.\""
+    - generic [ref=e152]:
+      - generic [ref=e153]: EA
+      - generic [ref=e154]: אייל אהרונסון
+      - generic [ref=e155]: מנהל המכללה למצוינות בספורט, מכון וינגייט
+  - generic [ref=e157]:
+    - heading "גלריית פעולה" [level=2] [ref=e158]
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - img "גביע אומות CEV 2026" [ref=e161]
+        - generic [ref=e163]: גביע אומות CEV 2026
+      - generic [ref=e164]:
+        - img "גביע אומות CEV 2026" [ref=e165]
+        - generic [ref=e167]: גביע אומות CEV 2026
+      - generic [ref=e168]:
+        - img "גביע אומות CEV 2026" [ref=e169]
+        - generic [ref=e171]: גביע אומות CEV 2026
+      - generic [ref=e172]:
+        - img "גביע אומות CEV 2026" [ref=e173]
+        - generic [ref=e175]: גביע אומות CEV 2026
+      - generic [ref=e176]:
+        - img "גביע לאומי הונגריה 2026" [ref=e177]
+        - generic [ref=e179]: גביע לאומי הונגריה 2026
+      - generic [ref=e180]:
+        - img "גביע לאומי הונגריה 2026" [ref=e181]
+        - generic [ref=e183]: גביע לאומי הונגריה 2026
+      - generic [ref=e184]:
+        - img "אליפות אירופה" [ref=e185]
+        - generic [ref=e187]: אליפות אירופה
+      - generic [ref=e188]:
+        - img "מדליית ארד קפריסין" [ref=e189]
+        - generic [ref=e191]: מדליית ארד קפריסין
+      - generic [ref=e192]:
+        - img "מסירה מדויקת" [ref=e193]
+        - generic [ref=e195]: מסירה מדויקת
+      - generic [ref=e196]:
+        - img "עצמת תחרות" [ref=e197]
+        - generic [ref=e199]: עצמת תחרות
+      - generic [ref=e200]:
+        - img "טקס מדליית CEV" [ref=e201]
+        - generic [ref=e203]: טקס מדליית CEV
+      - generic [ref=e204]:
+        - img "ריכוז באליפות" [ref=e205]
+        - generic [ref=e207]: ריכוז באליפות
+      - generic [ref=e208]:
+        - img "פודיום ניצחון" [ref=e209]
+        - generic [ref=e211]: פודיום ניצחון
+      - generic [ref=e212]:
+        - img "הנחתת עוצמה" [ref=e213]
+        - generic [ref=e215]: הנחתת עוצמה
+      - generic [ref=e216]:
+        - img "אליפות ישראל" [ref=e217]
+        - generic [ref=e219]: אליפות ישראל
+      - generic [ref=e220]:
+        - img "טורניר חופים" [ref=e221]
+        - generic [ref=e223]: טורניר חופים
+      - generic [ref=e224]:
+        - img "זהב אליפות" [ref=e225]
+        - generic [ref=e227]: זהב אליפות
+      - generic [ref=e228]:
+        - img "ספורטאי ממוקד" [ref=e229]
+        - generic [ref=e231]: ספורטאי ממוקד
+      - generic [ref=e232]:
+        - img "שיתוף פעולה" [ref=e233]
+        - generic [ref=e235]: שיתוף פעולה
+      - generic [ref=e236]:
+        - img "משחק הגנה" [ref=e237]
+        - generic [ref=e239]: משחק הגנה
+      - generic [ref=e240]:
+        - img "רגע ניצחון" [ref=e241]
+        - generic [ref=e243]: רגע ניצחון
+      - generic [ref=e244]:
+        - img "ארד טורניר" [ref=e245]
+        - generic [ref=e247]: ארד טורניר
+      - generic [ref=e248]:
+        - img "CEV סלובניה" [ref=e249]
+        - generic [ref=e251]: CEV סלובניה
+  - generic [ref=e253]:
+    - heading "חזון ויעדים" [level=2] [ref=e254]
+    - paragraph [ref=e255]: מסלול ברור להפוך לאחד משחקני כדורעף החופים האליטיסטיים בעולם
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - heading "מצוינות בינלאומית" [level=3] [ref=e258]
+        - paragraph [ref=e259]: המשך לייצג את ישראל בתחרויות בינלאומיות ולהגיע לצמרת הדירוג העולמי
+      - generic [ref=e260]:
+        - heading "קריירה מקצועית" [level=3] [ref=e261]
+        - paragraph [ref=e262]: בניית קריירה מקצועית מצליחה ברמות הגבוהות ביותר של הענף
+      - generic [ref=e263]:
+        - heading "השראה לדור הצעיר" [level=3] [ref=e264]
+        - paragraph [ref=e265]: להוות מודל ומנטור לדור הצעיר של ספורטאי ישראל
+      - generic [ref=e266]:
+        - heading "שבירת שיאים" [level=3] [ref=e267]
+        - paragraph [ref=e268]: המשך לרשום היסטוריה ולקבוע סטנדרטים חדשים לספורטאים ישראלים
+  - generic [ref=e270]:
+    - heading "מדוע לתת חסות לעומר?" [level=2] [ref=e271]
+    - paragraph [ref=e272]: שותפות עם אלוף עולה — חלק ממסע ספורטיבי מעורר השראה
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - generic [ref=e275]: ★
+        - heading "כוכב עולה" [level=3] [ref=e276]
+        - paragraph [ref=e277]: שותפות עם ספורטאי בתחילת קריירה בינלאומית מבטיחה
+      - generic [ref=e278]:
+        - generic [ref=e279]: ★
+        - heading "קהל צעיר" [level=3] [ref=e280]
+        - paragraph [ref=e281]: חיבור לקהל אוהדי ספורט נוער ומשפחותיהם ברחבי ישראל
+      - generic [ref=e282]:
+        - generic [ref=e283]: ★
+        - heading "חשיפה בינלאומית" [level=3] [ref=e284]
+        - paragraph [ref=e285]: נראות מותג באליפויות אירופה ובטורנירים בינלאומיים
+      - generic [ref=e286]:
+        - generic [ref=e287]: ★
+        - heading "תוכן ומדיה" [level=3] [ref=e288]
+        - paragraph [ref=e289]: יצירת תוכן אותנטי ושיתופי פעולה ברשתות חברתיות
+      - generic [ref=e290]:
+        - generic [ref=e291]: ★
+        - heading "סיפור מעורר השראה" [level=3] [ref=e292]
+        - paragraph [ref=e293]: התחברות לספורטאי המגלם נחישות ומצוינות
+      - generic [ref=e294]:
+        - generic [ref=e295]: ★
+        - heading "שותפות ארוכת טווח" [level=3] [ref=e296]
+        - paragraph [ref=e297]: צמיחה משותפת ככל שעומר מתקדם לתחרות בינלאומית מקצועית
+  - generic [ref=e299]:
+    - heading "חשיפת מותג והשפעה" [level=2] [ref=e300]
+    - paragraph [ref=e301]: השתתפות בתחרויות כדורעף נוער עילית מציעה לחסויות חשיפת מותג משמעותית באמצעות נוכחות חיה, שידורי טלוויזיה, סטרימינג והגעה ברשתות חברתיות ברחבי אירופה והעולם. נראות שחקן נוער מובילה ניתנת להגברה דרך לוגואים על המדים, באנרים בצד המגרש ופרופילי שחקנים.
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - heading "תחרויות גיל CEV" [level=3] [ref=e304]
+        - paragraph [ref=e305]: אליפויות U18 ו-U20 של CEV מתקיימות באתרים בקיבולת 750-1,000 צופים למשחק, עם נוכחות מינימלית של 400-1,250 אוהדים. הטורנירים נצפים בפלטפורמות כמו EuroVolley.TV. חסויות זוכות לחשיפה ב-25+ מדינות.
+      - generic [ref=e306]:
+        - heading "תחרויות CEV בוגרים" [level=3] [ref=e307]
+        - paragraph [ref=e308]: אירועי CEV בוגרים, כגון ליגת האלופות, מושכים קהל של מעל 1,000 למשחק עם סך נוכחות של 88,365. שידורי TV מגיעים לעשרות מיליונים (63.5 מיליון מצטבר בחמש שנים) ב-45+ ערוצים.
+      - generic [ref=e309]:
+        - heading "אליפויות עולם FIVB" [level=3] [ref=e310]
+        - paragraph [ref=e311]: אליפויות U18/U20 הולידו 19 מיליון צפיות ב-YouTube, 2.15 מיליון שעות צפייה ושיאי 131,500 צופים בו-זמנית. גמרים מושכים מיליונים בשווקי מפתח כמו איטליה ופולין (5+ מיליון משולב).
+      - generic [ref=e312]:
+        - heading "אולימפיאדת נוער דאקאר 2026" [level=3] [ref=e313]
+        - paragraph [ref=e314]: כדורעף משוחק באתרים כמו Dakar Arena (קיבולת 7,500), עם מעורבות של 60,000+ משתתפים. חסויות נהנות משותפויות מדיה של ה-IOC והגברה ברשתות חברתיות.
+  - contentinfo [ref=e315]:
+    - heading "עומר גוזלן" [level=3] [ref=e316]
+    - paragraph [ref=e317]: נבחרת ישראל לכדורעף חופים | המכללה למצוינות בספורט, מכון וינגייט
+    - paragraph [ref=e318]: © 2026 עומר גוזלן. כל הזכויות שמורות.

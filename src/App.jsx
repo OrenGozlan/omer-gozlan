@@ -83,7 +83,8 @@ function Hero({ t }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: `url(${HERO_IMG})` }} />
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-amber-800/30 to-amber-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-stone-950/85 via-stone-900/70 to-amber-50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-stone-950/60 via-transparent to-stone-950/60" />
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
         className="relative z-10 text-center px-6 pt-20 max-w-5xl">
         <div className="flex items-center justify-center gap-3 mb-6 text-white font-bold text-sm md:text-base drop-shadow-lg">
