@@ -7,7 +7,7 @@ export const translations = {
       tagline: 'כדורעף חופים | נבחרת ישראל',
       name: 'עומר גוזלן',
       sub: 'הכוכב העולה של כדורעף החופים בישראל',
-      badges: ['אלוף עוקב', '4 מדליות בינלאומיות', 'מכון וינגייט'],
+      badges: ['אלוף עוקב', '6 מדליות בינלאומיות', 'מכון וינגייט'],
       blurb: 'בגיל 17 בלבד, עומר רושם היסטוריה כאחד הספורטאים הצעירים המבטיחים של ישראל. בעקבות הצלחה מדהימה בטורנירי בוגרים בתחילת עונת 2026, עומר מתחיל להתמקד בסבב המקצועני לבוגרים — כולל 4 תחרויות מתוכננות בסין, בולגריה, הונגריה ואנגליה, לצד תחרויות המטרה ב-U18 ו-U20 ואולימפיאדת הנוער דאקאר.',
       blurb_short: 'הסיפור של ישראל בכדורעף החופים — מסע אל אולימפיאדת הנוער דאקאר 2026.',
       cta: 'הצטרפו כשותפים',
@@ -29,15 +29,13 @@ export const translations = {
       rec: 'מאמנים ודמויות מובילות בענף מזהים בעומר ספורטאי בעל פוטנציאל יוצא מן הכלל להגיע לרמות הבינלאומיות הגבוהות ביותר. השילוב של כישרון פיזי, חוסן מנטלי ומסירות מציב אותו ככוכב עתידי של הענף.',
     },
     record: {
-      heading: 'שיא אליפות',
+      heading: 'הישגים',
       s2026_h: 'עונת 2026',
       s2025_h: 'עונת 2025',
       s2024_h: 'עונת 2024',
       s2026: [
         { rank: '#1', title: 'גביע אומות CEV 2026', sub: 'בוגרים — מקום ראשון' },
         { rank: '#2', title: 'גביע לאומי הונגריה 2026', sub: 'בוגרים — מקום שני' },
-        { rank: '#1', title: 'דירוג ישראל U20', sub: 'מקום ראשון' },
-        { rank: '#1', title: 'דירוג ישראל U18', sub: 'מקום ראשון' },
       ],
       s2025: [
         { rank: '#1', title: 'אליפות ישראל U18 2025', sub: 'מקום ראשון' },
@@ -52,7 +50,7 @@ export const translations = {
         { rank: '#8', title: 'אליפות ישראל בוגרים B 2024', sub: 'מקום שמיני' },
         { rank: '#4', title: 'CEV צ׳כיה 2024', sub: 'טורניר CEV' },
       ],
-      progression: 'מדומיננטיות בתחרויות נוער ועד תחרות ברמות בוגרים אליטיסטיות ואליפויות אירופה. עקביות עומר במגוון קבוצות גיל וטורנירים בינלאומיים מעידה על כישרון יוצא דופן ופוטנציאל להגיע לפסגות הכדורעף המקצועי.',
+      progression: 'עומר עולה כיתה — מנוער לבוגרים, מגביעים ארציים לאליפויות אירופה ולסבב הבינלאומי. כל עונה רף חדש, כל טורניר צעד נוסף לעבר הצמרת העולמית.',
     },
     targets: {
       heading: 'יעדי 2026',
@@ -76,7 +74,7 @@ export const translations = {
       author: 'אייל אהרונסון',
       role: 'מנהל המכללה למצוינות בספורט, מכון וינגייט',
     },
-    gallery: { heading: 'גלריית פעולה' },
+    gallery: { heading: 'גלריה' },
     vision: {
       heading: 'חזון ויעדים',
       sub: 'מסלול ברור להפוך לאחד משחקני כדורעף החופים האליטיסטיים בעולם',
@@ -139,7 +137,7 @@ export const translations = {
     print: 'הדפיסו עמוד זה כמצגת חסות',
     contact: {
       heading: 'בואו לדבר',
-      sub: 'מחפשים שותף לדרך לדאקאר 2026? צרו קשר — נשלח לכם את חבילת החסות.',
+      sub: 'רוצים להצטרף למסע? צרו קשר ובואו נדבר על שותפות.',
       cta_email: 'שלחו אימייל',
       cta_ig: 'עקבו באינסטגרם',
     },
@@ -155,7 +153,7 @@ export const translations = {
       tagline: 'Beach Volleyball | Team Israel',
       name: 'OMER GOZLAN',
       sub: 'Rising Star of Israeli Beach Volleyball',
-      badges: ['Back-to-Back Champion', '4x International Medalist', 'Wingate Institute'],
+      badges: ['Back-to-Back Champion', '6x International Medalist', 'Wingate Institute'],
       blurb: 'Israel\'s #1 U18 beach volleyball player. 6 international medals by 17. Following breakout wins on the adult tour in early 2026, Omer is now stepping onto the pro adults circuit — 4 events in China, Bulgaria, Hungary, and England, alongside his target U18, U20, and Dakar 2026 Youth Olympics campaigns.',
       blurb_short: 'Israel\'s beach volleyball story — on the road to Dakar 2026 Youth Olympics.',
       cta: 'Become a Partner',
@@ -177,15 +175,13 @@ export const translations = {
       rec: 'Coaches and leading figures in the sport recognize Omer as an athlete with outstanding potential to reach the highest international levels. His combination of physical talent, mental toughness, and dedication sets him apart as a future star of the sport.',
     },
     record: {
-      heading: 'Championship Record',
+      heading: 'Achievements',
       s2026_h: '2026 Season',
       s2025_h: '2025 Season',
       s2024_h: '2024 Season',
       s2026: [
         { rank: '#1', title: 'CEV Nations Cup 2026', sub: 'Adults — 1st Place' },
         { rank: '#2', title: 'Hungary National Cup 2026', sub: 'Adults — 2nd Place' },
-        { rank: '#1', title: 'Israel U20 Ranking', sub: '1st Place' },
-        { rank: '#1', title: 'Israel U18 Ranking', sub: '1st Place' },
       ],
       s2025: [
         { rank: '#1', title: '2025 Israel Championship', sub: 'Israel U18' },
@@ -200,7 +196,7 @@ export const translations = {
         { rank: '#8', title: '2024 National Championship', sub: 'Israel Adults B' },
         { rank: '#4', title: '2024 CEV Tournament', sub: 'CEV Czechia' },
       ],
-      progression: 'From dominating youth competitions to competing at elite adult levels and European championships. Omer\'s consistent performance across multiple age groups and international tournaments demonstrates exceptional talent and the potential to reach the highest levels of professional beach volleyball.',
+      progression: 'Omer keeps climbing — from youth to adult, from national cups to European championships to the international tour. Every season raises the bar; every tournament is another step toward the top of the sport.',
     },
     targets: {
       heading: '2026 Target Competitions',
@@ -224,7 +220,7 @@ export const translations = {
       author: 'Eyal Aharonson',
       role: 'Director, Academy for Excellence in Sports, Wingate Institute',
     },
-    gallery: { heading: 'Action Gallery' },
+    gallery: { heading: 'Gallery' },
     vision: {
       heading: 'Vision & Goals',
       sub: 'A clear path to becoming one of the world\'s elite beach volleyball players',
@@ -287,7 +283,7 @@ export const translations = {
     print: 'Print this page as a sponsorship brief',
     contact: {
       heading: 'Let\'s talk.',
-      sub: 'Looking to partner with Omer on the road to Dakar 2026? Get in touch — we\'ll send the sponsorship deck.',
+      sub: 'Want to join the journey? Get in touch and let\'s talk partnership.',
       cta_email: 'Email Us',
       cta_ig: 'Follow on Instagram',
     },

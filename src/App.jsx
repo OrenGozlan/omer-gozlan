@@ -37,14 +37,6 @@ const GALLERY = [
   { src: P('victory-moment.jpg'), event: 'action', he: 'רגע ניצחון', en: 'Victory Moment' },
 ];
 
-const EVENT_GROUPS = {
-  cev2026: { he: 'גביע אומות CEV 2026 — זהב', en: 'CEV Nations Cup 2026 — Gold' },
-  hungary: { he: 'גביע לאומי הונגריה 2026 — כסף', en: 'Hungary National Cup 2026 — Silver' },
-  euro: { he: 'אליפויות אירופה 2025', en: '2025 European Championships' },
-  israel: { he: 'אליפות ישראל', en: 'Israel Championship' },
-  action: { he: 'אקשן', en: 'Action' },
-};
-
 function Nav({ t, lang, toggle }) {
   const [visible, setVisible] = useState(true);
   const [lastY, setLastY] = useState(0);
@@ -186,12 +178,12 @@ function Hero({ t }) {
 
 function Stats({ t }) {
   return (
-    <section className="py-20 md:py-28 px-6 bg-slate-900 text-white border-y-4 border-amber-500">
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-800">
+    <section className="py-14 md:py-16 px-6 bg-amber-50/60">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
         {t.stats.map((s, i) => (
-          <div key={i} className="bg-slate-900 text-center p-8 md:p-10">
-            <div className="font-display-en text-7xl md:text-9xl font-black text-amber-400 tabular-nums leading-none mb-3">{s.n}</div>
-            <div className="text-stone-300 text-xs md:text-sm font-bold uppercase tracking-widest">{s.l}</div>
+          <div key={i} className="bg-white border border-amber-200 rounded-2xl p-5 md:p-6 text-center shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
+            <div className="font-display-en text-3xl md:text-5xl font-black bg-gradient-to-br from-amber-500 to-orange-600 bg-clip-text text-transparent tabular-nums leading-none mb-2">{s.n}</div>
+            <div className="text-stone-700 text-xs md:text-sm font-semibold">{s.l}</div>
           </div>
         ))}
       </div>
@@ -304,40 +296,25 @@ function Testimonial({ t }) {
 
 function Gallery({ t, lang }) {
   const [lightbox, setLightbox] = useState(null);
-  const grouped = Object.keys(EVENT_GROUPS).map(key => ({
-    key,
-    title: EVENT_GROUPS[key][lang],
-    photos: GALLERY.filter(g => g.event === key),
-  }));
-
   return (
     <section id="gallery" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight mb-12 text-center text-amber-800">{t.gallery.heading}</h2>
-        {grouped.map(group => (
-          <div key={group.key} className="mb-14">
-            <h3 className="font-display-en text-2xl md:text-3xl font-black uppercase tracking-tight text-amber-700 mb-5">{group.title}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3 md:gap-4">
-              {group.photos.map((img, idx) => {
-                const big = idx === 0 && group.photos.length >= 3;
-                return (
-                  <button key={img.src} onClick={() => setLightbox(img)}
-                    className={`relative overflow-hidden rounded-xl group shadow-md hover:shadow-2xl transition-shadow text-start focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500
-                      ${big ? 'col-span-2 row-span-2' : ''}`}>
-                    <img src={img.src} alt={img[lang]} loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <div className="md:hidden absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/85 to-transparent p-2.5">
-                      <span className="text-xs font-semibold text-white">{img[lang]}</span>
-                    </div>
-                    <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity items-end p-3">
-                      <span className="text-sm font-semibold text-white">{img[lang]}</span>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {GALLERY.map((img) => (
+            <button key={img.src} onClick={() => setLightbox(img)}
+              className="relative overflow-hidden rounded-xl aspect-[4/5] group shadow-md hover:shadow-2xl transition-shadow text-start focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500 bg-stone-100">
+              <img src={img.src} alt={img[lang]} loading="lazy"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+              <div className="md:hidden absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/85 to-transparent p-2.5">
+                <span className="text-xs font-semibold text-white">{img[lang]}</span>
+              </div>
+              <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity items-end p-3">
+                <span className="text-sm font-semibold text-white">{img[lang]}</span>
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
       <AnimatePresence>
         {lightbox && (
@@ -503,8 +480,7 @@ export default function App() {
       <Targets t={t} />
       <Testimonial t={t} />
       <Gallery t={t} lang={lang} />
-      <Vision t={t} />
-      <Reach t={t} />
+        <Vision t={t} />
         <Sponsor t={t} />
         <Contact t={t} lang={lang} />
         <Footer t={t} />
