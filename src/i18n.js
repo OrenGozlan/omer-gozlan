@@ -107,6 +107,8 @@ export const translations = {
         { t: 'אולימפיאדת נוער דאקאר 2026', d: 'כדורעף משוחק באתרים כמו Dakar Arena (קיבולת 7,500), עם מעורבות של 60,000+ משתתפים. חסויות נהנות משותפויות מדיה של ה-IOC והגברה ברשתות חברתיות.' },
       ],
     },
+    countdown: { days: 'ימים', to_dakar: 'עד דאקאר 2026' },
+    sticky_cta: 'הצטרפו כשותפים',
     contact: {
       heading: 'בואו לדבר',
       sub: 'מחפשים שותף לדרך לדאקאר 2026? צרו קשר — נשלח לכם את חבילת החסות.',
@@ -225,6 +227,8 @@ export const translations = {
         { t: 'European Championships & Youth Olympics', d: 'European U18/U20 Championships mirror CEV figures with similar venue sizes and regional TV reach. The 2026 Youth Olympics in Dakar include volleyball at venues like Dakar Arena (7,500 capacity), engaging 60,000+ participants in past Olympic volleyball experiences and building youth-focused global buzz. Sponsors benefit from IOC media partnerships and social amplification.' },
       ],
     },
+    countdown: { days: 'DAYS', to_dakar: 'TO DAKAR 2026' },
+    sticky_cta: 'Become a Partner',
     contact: {
       heading: 'Let\'s talk.',
       sub: 'Looking to partner with Omer on the road to Dakar 2026? Get in touch — we\'ll send the sponsorship deck.',

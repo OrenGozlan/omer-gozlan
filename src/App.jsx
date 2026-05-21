@@ -9,6 +9,8 @@ const IG_OMER = 'g0zlan_';
 const IG_TEAM = 'beachallvolleyball';
 
 const HERO_IMG = P('VIK_1692.jpg');
+const DAKAR_DATE = new Date('2026-10-31T00:00:00Z');
+const daysToDakar = () => Math.max(0, Math.ceil((DAKAR_DATE - new Date()) / 86400000));
 
 const GALLERY = [
   { src: P('VIK_0434.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
@@ -144,10 +146,14 @@ function Hero({ t }) {
         <div className="hero-text flex items-center justify-center gap-3 mb-6 text-amber-200 font-bold text-sm md:text-base">
           <span className="bidi-iso">🏐</span><span>{t.hero.tagline}</span><span className="bidi-iso">🇮🇱</span>
         </div>
-        <h1 className="hero-text text-5xl md:text-8xl font-black mb-4 text-white leading-tight">
+        <h1 className="font-display-en hero-text text-6xl md:text-9xl font-black mb-4 text-white leading-[0.9] uppercase">
           {t.hero.name}
         </h1>
         <p className="hero-text text-xl md:text-3xl text-amber-100 font-bold mb-6">{t.hero.sub}</p>
+        <div className="inline-flex items-center gap-3 px-5 py-2 mb-6 bg-amber-500/20 backdrop-blur border border-amber-300/50 rounded-full">
+          <span className="text-2xl md:text-3xl font-black text-amber-200 tabular-nums">{daysToDakar()}</span>
+          <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-amber-100">{t.countdown.days} · {t.countdown.to_dakar}</span>
+        </div>
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8">
           {t.hero.badges.map((b, i) => (
             <span key={i} className="px-3 md:px-4 py-1.5 bg-white/95 border border-amber-300 rounded-full text-xs md:text-sm font-bold text-amber-800 shadow-lg">{b}</span>
@@ -172,15 +178,13 @@ function Hero({ t }) {
 
 function Stats({ t }) {
   return (
-    <section className="py-14 px-6 bg-gradient-to-b from-amber-50 to-orange-50/60">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+    <section className="py-20 md:py-28 px-6 bg-slate-900 text-white border-y-4 border-amber-500">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-800">
         {t.stats.map((s, i) => (
-          <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="text-center bg-white border border-amber-200 rounded-2xl p-6 shadow-md">
-            <div className="text-4xl md:text-6xl font-black bg-gradient-to-br from-amber-500 to-orange-600 bg-clip-text text-transparent mb-2">{s.n}</div>
-            <div className="text-stone-700 text-sm md:text-base font-semibold">{s.l}</div>
-          </motion.div>
+          <div key={i} className="bg-slate-900 text-center p-8 md:p-10">
+            <div className="font-display-en text-7xl md:text-9xl font-black text-amber-400 tabular-nums leading-none mb-3">{s.n}</div>
+            <div className="text-stone-300 text-xs md:text-sm font-bold uppercase tracking-widest">{s.l}</div>
+          </div>
         ))}
       </div>
     </section>
@@ -196,7 +200,7 @@ function About({ t }) {
   return (
     <section id="about" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-800">{t.about.heading}</h2>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight mb-12 text-center text-amber-800">{t.about.heading}</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {cards.map((c, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -230,7 +234,7 @@ function Record({ t }) {
   return (
     <section id="record" className="py-24 px-6 bg-gradient-to-b from-orange-50/60 via-amber-50 to-orange-50/60">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-800">{t.record.heading}</h2>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight mb-12 text-center text-amber-800">{t.record.heading}</h2>
         <Season heading={t.record.s2026_h} items={t.record.s2026} accent="text-orange-700" />
         <Season heading={t.record.s2025_h} items={t.record.s2025} accent="text-amber-800" />
         <Season heading={t.record.s2024_h} items={t.record.s2024} accent="text-amber-700" />
@@ -249,7 +253,7 @@ function Targets({ t }) {
   return (
     <section id="targets" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-800 mb-3">{t.targets.heading}</h2>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-3">{t.targets.heading}</h2>
         <p className="text-center text-stone-600 mb-12">{t.targets.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {t.targets.items.map((it, i) => (
@@ -301,7 +305,7 @@ function Gallery({ t, lang }) {
   return (
     <section id="gallery" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-800">{t.gallery.heading}</h2>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight mb-12 text-center text-amber-800">{t.gallery.heading}</h2>
         {grouped.map(group => (
           <div key={group.key} className="mb-12">
             <h3 className="text-xl md:text-2xl font-bold text-amber-700 mb-5">{group.title}</h3>
@@ -345,7 +349,7 @@ function Vision({ t }) {
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-orange-50/60 to-amber-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-800 mb-3">{t.vision.heading}</h2>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-3">{t.vision.heading}</h2>
         <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">{t.vision.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {t.vision.items.map((it, i) => (
@@ -362,15 +366,15 @@ function Vision({ t }) {
 
 function Reach({ t }) {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-amber-50 to-orange-50/60">
+    <section className="py-24 md:py-32 px-6 bg-slate-900 text-white border-y-4 border-amber-500">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-800 mb-6">{t.reach.heading}</h2>
-        <p className="text-center text-stone-700 max-w-4xl mx-auto mb-12 leading-relaxed">{t.reach.intro}</p>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black text-center text-amber-400 mb-6 uppercase tracking-tight">{t.reach.heading}</h2>
+        <p className="text-center text-stone-300 max-w-4xl mx-auto mb-12 leading-relaxed text-lg">{t.reach.intro}</p>
         <div className="grid md:grid-cols-2 gap-5">
           {t.reach.items.map((it, i) => (
-            <div key={i} className="bg-white border border-amber-200 rounded-2xl p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-amber-800 mb-3">{it.t}</h3>
-              <p className="text-stone-700 text-sm leading-relaxed">{it.d}</p>
+            <div key={i} className="bg-slate-800/60 border border-slate-700 rounded-2xl p-7 hover:border-amber-500 transition-colors">
+              <h3 className="text-xl font-bold text-amber-400 mb-3">{it.t}</h3>
+              <p className="text-stone-300 text-sm leading-relaxed">{it.d}</p>
             </div>
           ))}
         </div>
@@ -383,7 +387,7 @@ function Sponsor({ t }) {
   return (
     <section id="sponsor" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-800 mb-4">{t.sponsor.heading}</h2>
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-4">{t.sponsor.heading}</h2>
         <p className="text-center text-stone-700 mb-12 max-w-3xl mx-auto text-lg leading-relaxed">{t.sponsor.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {t.sponsor.items.map((it, i) => (
@@ -445,11 +449,33 @@ function Footer({ t }) {
   );
 }
 
+function StickyCTA({ t }) {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.button
+          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }}
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          className="fixed bottom-5 end-5 z-40 px-5 md:px-7 py-3 md:py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-black uppercase tracking-wide text-sm md:text-base shadow-2xl hover:scale-105 transition-transform">
+          {t.sticky_cta} →
+        </motion.button>
+      )}
+    </AnimatePresence>
+  );
+}
+
 export default function App() {
   const { lang, t, toggle } = useLang();
   return (
     <div className="min-h-screen bg-amber-50/40 text-stone-900">
       <Nav t={t} lang={lang} toggle={toggle} />
+      <StickyCTA t={t} />
       <Hero t={t} />
       <Stats t={t} />
       <About t={t} />

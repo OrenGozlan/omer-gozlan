@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Heebo', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Barlow Condensed"', 'Heebo', 'system-ui', 'sans-serif'],
+        body: ['Barlow', 'Heebo', 'system-ui', 'sans-serif'],
       },
     },
   },
