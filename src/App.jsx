@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLang } from './i18n';
 
+const B = import.meta.env.BASE_URL;
 const PHOTOS = [
-  '/photos/VIK_1692.jpg',
-  '/photos/VIK_0434.jpg',
-  '/photos/VIK_0475.jpg',
-  '/photos/VIK_0504.jpg',
-  '/photos/VIK_0507.jpg',
-  '/photos/VIK_8913.JPG',
-  '/photos/VIK_8968.JPG',
+  `${B}photos/VIK_1692.jpg`,
+  `${B}photos/VIK_0434.jpg`,
+  `${B}photos/VIK_0475.jpg`,
+  `${B}photos/VIK_0504.jpg`,
+  `${B}photos/VIK_0507.jpg`,
+  `${B}photos/VIK_8913.JPG`,
+  `${B}photos/VIK_8968.JPG`,
 ];
 
 function Nav({ t, lang, toggle }) {
