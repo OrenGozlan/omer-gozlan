@@ -55,20 +55,20 @@ function Nav({ t, lang, toggle }) {
         <motion.nav
           initial={{ y: -100 }} animate={{ y: 0 }} exit={{ y: -100 }}
           transition={{ duration: 0.3 }}
-          className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10"
+          className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md border-b border-amber-200/60 shadow-sm"
         >
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-2">
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-lg md:text-2xl font-black bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent whitespace-nowrap">
+              className="text-lg md:text-2xl font-black bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent whitespace-nowrap">
               OMER GOZLAN
             </button>
             <div className="flex items-center gap-2 md:gap-5 text-xs md:text-base">
-              <button onClick={() => go('about')} className="hidden sm:block hover:text-amber-400 font-semibold">{t.nav.about}</button>
-              <button onClick={() => go('record')} className="hover:text-amber-400 font-semibold">{t.nav.record}</button>
-              <button onClick={() => go('targets')} className="hidden md:block hover:text-amber-400 font-semibold">{t.nav.targets}</button>
-              <button onClick={() => go('gallery')} className="hidden sm:block hover:text-amber-400 font-semibold">{t.nav.gallery}</button>
-              <button onClick={() => go('sponsor')} className="hover:text-amber-400 font-semibold">{t.nav.sponsor}</button>
-              <button onClick={toggle} className="px-2 md:px-3 py-1 border border-amber-400 text-amber-400 rounded font-bold text-xs">
+              <button onClick={() => go('about')} className="hidden sm:block text-stone-700 hover:text-amber-700 font-semibold">{t.nav.about}</button>
+              <button onClick={() => go('record')} className="text-stone-700 hover:text-amber-700 font-semibold">{t.nav.record}</button>
+              <button onClick={() => go('targets')} className="hidden md:block text-stone-700 hover:text-amber-700 font-semibold">{t.nav.targets}</button>
+              <button onClick={() => go('gallery')} className="hidden sm:block text-stone-700 hover:text-amber-700 font-semibold">{t.nav.gallery}</button>
+              <button onClick={() => go('sponsor')} className="text-stone-700 hover:text-amber-700 font-semibold">{t.nav.sponsor}</button>
+              <button onClick={toggle} className="px-2 md:px-3 py-1 border border-amber-500 text-amber-700 rounded font-bold text-xs hover:bg-amber-50">
                 {lang === 'he' ? 'EN' : 'עב'}
               </button>
             </div>
@@ -83,24 +83,24 @@ function Hero({ t }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: `url(${HERO_IMG})` }} />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-amber-800/30 to-amber-50" />
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
         className="relative z-10 text-center px-6 pt-20 max-w-5xl">
-        <div className="flex items-center justify-center gap-3 mb-6 text-amber-300 font-bold text-sm md:text-base">
+        <div className="flex items-center justify-center gap-3 mb-6 text-white font-bold text-sm md:text-base drop-shadow-lg">
           <span>🏐</span><span>{t.hero.tagline}</span><span>🇮🇱</span>
         </div>
-        <h1 className="text-5xl md:text-8xl font-black mb-4 bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500 bg-clip-text text-transparent leading-tight">
+        <h1 className="text-5xl md:text-8xl font-black mb-4 text-white drop-shadow-2xl leading-tight">
           {t.hero.name}
         </h1>
-        <p className="text-xl md:text-3xl text-white/95 font-bold mb-6">{t.hero.sub}</p>
+        <p className="text-xl md:text-3xl text-amber-50 font-bold mb-6 drop-shadow-lg">{t.hero.sub}</p>
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8">
           {t.hero.badges.map((b, i) => (
-            <span key={i} className="px-3 md:px-4 py-1.5 bg-amber-500/20 border border-amber-400/40 rounded-full text-xs md:text-sm font-semibold text-amber-200">{b}</span>
+            <span key={i} className="px-3 md:px-4 py-1.5 bg-white/90 backdrop-blur border border-amber-300 rounded-full text-xs md:text-sm font-bold text-amber-800 shadow-lg">{b}</span>
           ))}
         </div>
-        <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">{t.hero.blurb}</p>
+        <p className="text-base md:text-lg text-white/95 max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow">{t.hero.blurb}</p>
         <button onClick={() => document.getElementById('record')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
+          className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
           {t.hero.cta}
         </button>
       </motion.div>
@@ -110,14 +110,14 @@ function Hero({ t }) {
 
 function Stats({ t }) {
   return (
-    <section className="py-12 px-6 bg-gradient-to-b from-black to-stone-950">
+    <section className="py-14 px-6 bg-gradient-to-b from-amber-50 to-orange-50/60">
       <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {t.stats.map((s, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="text-center bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-400/20 rounded-2xl p-6">
-            <div className="text-4xl md:text-6xl font-black bg-gradient-to-br from-amber-300 to-orange-500 bg-clip-text text-transparent mb-2">{s.n}</div>
-            <div className="text-white/70 text-sm md:text-base font-semibold">{s.l}</div>
+            className="text-center bg-white border border-amber-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow">
+            <div className="text-4xl md:text-6xl font-black bg-gradient-to-br from-amber-500 to-orange-600 bg-clip-text text-transparent mb-2">{s.n}</div>
+            <div className="text-stone-600 text-sm md:text-base font-semibold">{s.l}</div>
           </motion.div>
         ))}
       </div>
@@ -132,16 +132,16 @@ function About({ t }) {
     { h: t.about.rec_h, b: t.about.rec },
   ];
   return (
-    <section id="about" className="py-24 px-6 bg-stone-950">
+    <section id="about" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-400">{t.about.heading}</h2>
+        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-700">{t.about.heading}</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {cards.map((c, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-7">
-              <h3 className="text-2xl font-bold text-amber-300 mb-4">{c.h}</h3>
-              <p className="text-white/80 leading-relaxed">{c.b}</p>
+              className="bg-amber-50/60 border border-amber-200 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold text-amber-700 mb-4">{c.h}</h3>
+              <p className="text-stone-700 leading-relaxed">{c.b}</p>
             </motion.div>
           ))}
         </div>
@@ -158,24 +158,24 @@ function Record({ t }) {
         {items.map((a, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="bg-gradient-to-br from-amber-500/15 to-orange-600/5 border border-amber-400/20 rounded-xl p-5 hover:border-amber-400/50 transition-colors">
-            <div className="text-4xl font-black bg-gradient-to-br from-amber-300 to-orange-500 bg-clip-text text-transparent mb-2">{a.rank}</div>
-            <h4 className="text-lg font-bold mb-1">{a.title}</h4>
-            <p className="text-amber-300/90 text-sm font-semibold">{a.sub}</p>
+            className="bg-white border border-amber-200 rounded-xl p-5 shadow-sm hover:shadow-lg hover:border-amber-400 transition-all">
+            <div className="text-4xl font-black bg-gradient-to-br from-amber-500 to-orange-600 bg-clip-text text-transparent mb-2">{a.rank}</div>
+            <h4 className="text-lg font-bold mb-1 text-stone-800">{a.title}</h4>
+            <p className="text-amber-700 text-sm font-semibold">{a.sub}</p>
           </motion.div>
         ))}
       </div>
     </div>
   );
   return (
-    <section id="record" className="py-24 px-6 bg-gradient-to-b from-stone-950 via-black to-stone-950">
+    <section id="record" className="py-24 px-6 bg-gradient-to-b from-orange-50/60 via-amber-50 to-orange-50/60">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-400">{t.record.heading}</h2>
-        <Season heading={t.record.s2026_h} items={t.record.s2026} accent="text-amber-300" />
-        <Season heading={t.record.s2025_h} items={t.record.s2025} accent="text-amber-400/90" />
-        <Season heading={t.record.s2024_h} items={t.record.s2024} accent="text-amber-400/70" />
+        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-700">{t.record.heading}</h2>
+        <Season heading={t.record.s2026_h} items={t.record.s2026} accent="text-orange-700" />
+        <Season heading={t.record.s2025_h} items={t.record.s2025} accent="text-amber-700" />
+        <Season heading={t.record.s2024_h} items={t.record.s2024} accent="text-amber-600" />
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-          className="text-center text-white/70 text-lg max-w-3xl mx-auto mt-8 leading-relaxed">
+          className="text-center text-stone-700 text-lg max-w-3xl mx-auto mt-8 leading-relaxed">
           {t.record.progression}
         </motion.p>
       </div>
@@ -185,33 +185,33 @@ function Record({ t }) {
 
 function Targets({ t }) {
   const tagColor = (tag) => {
-    if (['לאומי', 'National'].includes(tag)) return 'bg-blue-500/20 border-blue-400/40 text-blue-200';
-    if (['יבשתי', 'Continental'].includes(tag)) return 'bg-purple-500/20 border-purple-400/40 text-purple-200';
-    return 'bg-amber-500/20 border-amber-400/40 text-amber-200';
+    if (['לאומי', 'National'].includes(tag)) return 'bg-blue-100 border-blue-300 text-blue-800';
+    if (['יבשתי', 'Continental'].includes(tag)) return 'bg-purple-100 border-purple-300 text-purple-800';
+    return 'bg-amber-100 border-amber-300 text-amber-800';
   };
   return (
-    <section id="targets" className="py-24 px-6 bg-black">
+    <section id="targets" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-400 mb-3">{t.targets.heading}</h2>
-        <p className="text-center text-white/70 mb-12">{t.targets.sub}</p>
+        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-700 mb-3">{t.targets.heading}</h2>
+        <p className="text-center text-stone-600 mb-12">{t.targets.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {t.targets.items.map((it, i) => (
             <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col gap-2">
+              className="bg-amber-50/60 border border-amber-200 rounded-xl p-5 flex flex-col gap-2 hover:shadow-md transition-shadow">
               <span className={`self-start text-xs font-bold px-2 py-1 rounded border ${tagColor(it.tag)}`}>{it.tag}</span>
-              <h3 className="text-xl font-bold mt-1">{it.t}</h3>
-              <p className="text-white/60 text-sm">{it.s}</p>
+              <h3 className="text-xl font-bold mt-1 text-stone-800">{it.t}</h3>
+              <p className="text-stone-600 text-sm">{it.s}</p>
             </motion.div>
           ))}
         </div>
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="relative overflow-hidden bg-gradient-to-br from-amber-500/30 via-orange-600/20 to-amber-700/30 border-2 border-amber-400/50 rounded-2xl p-8 md:p-12 text-center">
-          <div className="inline-block text-xs md:text-sm font-black tracking-widest text-amber-300 mb-3">{t.targets.olympic_h}</div>
-          <h3 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-amber-200 to-orange-400 bg-clip-text text-transparent mb-4">{t.targets.olympic_t}</h3>
-          <p className="text-white/90 max-w-2xl mx-auto leading-relaxed">{t.targets.olympic_b}</p>
+          className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-2xl p-8 md:p-12 text-center shadow-2xl">
+          <div className="inline-block text-xs md:text-sm font-black tracking-widest text-amber-50 mb-3">{t.targets.olympic_h}</div>
+          <h3 className="text-3xl md:text-5xl font-black text-white mb-4 drop-shadow-lg">{t.targets.olympic_t}</h3>
+          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed">{t.targets.olympic_b}</p>
         </motion.div>
-        <p className="text-center text-white/60 max-w-3xl mx-auto mt-10 italic">{t.targets.foot}</p>
+        <p className="text-center text-stone-600 max-w-3xl mx-auto mt-10 italic">{t.targets.foot}</p>
       </div>
     </section>
   );
@@ -219,19 +219,19 @@ function Targets({ t }) {
 
 function Testimonial({ t }) {
   return (
-    <section className="py-24 px-6 bg-stone-950">
+    <section className="py-24 px-6 bg-gradient-to-b from-amber-50 to-orange-50/60">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-black text-amber-400 mb-10">{t.testimonial.heading}</h2>
+        <h2 className="text-3xl md:text-4xl font-black text-amber-700 mb-10">{t.testimonial.heading}</h2>
         <motion.blockquote initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed italic mb-8">
+          className="text-xl md:text-2xl text-stone-800 font-medium leading-relaxed italic mb-8">
           {t.testimonial.quote}
         </motion.blockquote>
         <div className="flex flex-col items-center gap-2">
-          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center font-black text-xl">
+          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center font-black text-xl text-white shadow-lg">
             EA
           </div>
-          <div className="font-bold text-amber-300">{t.testimonial.author}</div>
-          <div className="text-white/60 text-sm">{t.testimonial.role}</div>
+          <div className="font-bold text-amber-800">{t.testimonial.author}</div>
+          <div className="text-stone-600 text-sm">{t.testimonial.role}</div>
         </div>
       </div>
     </section>
@@ -240,18 +240,18 @@ function Testimonial({ t }) {
 
 function Gallery({ t, lang }) {
   return (
-    <section id="gallery" className="py-24 px-6 bg-black">
+    <section id="gallery" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-400">{t.gallery.heading}</h2>
+        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-amber-700">{t.gallery.heading}</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {GALLERY.map((img, i) => (
             <motion.div key={img.src}
               initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
               transition={{ delay: (i % 8) * 0.05 }}
-              className="relative overflow-hidden rounded-xl aspect-[3/4] group">
+              className="relative overflow-hidden rounded-xl aspect-[3/4] group shadow-md hover:shadow-2xl transition-shadow">
               <img src={img.src} alt={img[lang]} loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+              <div className="absolute inset-0 bg-gradient-to-t from-amber-900/85 via-amber-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
                 <span className="text-xs md:text-sm font-semibold text-white">{img[lang]}</span>
               </div>
             </motion.div>
@@ -264,17 +264,17 @@ function Gallery({ t, lang }) {
 
 function Vision({ t }) {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-black to-stone-950">
+    <section className="py-24 px-6 bg-gradient-to-b from-orange-50/60 to-amber-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-400 mb-3">{t.vision.heading}</h2>
-        <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto">{t.vision.sub}</p>
+        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-700 mb-3">{t.vision.heading}</h2>
+        <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">{t.vision.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {t.vision.items.map((it, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-400/20 rounded-2xl p-6 text-center hover:border-amber-400/50 transition-colors">
-              <h3 className="text-xl font-bold text-amber-300 mb-3">{it.t}</h3>
-              <p className="text-white/70 text-sm leading-relaxed">{it.d}</p>
+              className="bg-white border border-amber-200 rounded-2xl p-6 text-center hover:border-amber-400 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-700 mb-3">{it.t}</h3>
+              <p className="text-stone-700 text-sm leading-relaxed">{it.d}</p>
             </motion.div>
           ))}
         </div>
@@ -285,18 +285,18 @@ function Vision({ t }) {
 
 function Sponsor({ t }) {
   return (
-    <section id="sponsor" className="py-24 px-6 bg-gradient-to-b from-stone-950 to-black">
+    <section id="sponsor" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-400 mb-3">{t.sponsor.heading}</h2>
-        <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto">{t.sponsor.sub}</p>
+        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-700 mb-3">{t.sponsor.heading}</h2>
+        <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">{t.sponsor.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {t.sponsor.items.map((it, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <div className="text-amber-400 text-3xl mb-3">★</div>
-              <h3 className="text-xl font-bold mb-2">{it.t}</h3>
-              <p className="text-white/70 text-sm leading-relaxed">{it.d}</p>
+              className="bg-amber-50/60 border border-amber-200 rounded-2xl p-6 hover:bg-amber-100/60 hover:shadow-md transition-all">
+              <div className="text-amber-500 text-3xl mb-3">★</div>
+              <h3 className="text-xl font-bold mb-2 text-stone-800">{it.t}</h3>
+              <p className="text-stone-700 text-sm leading-relaxed">{it.d}</p>
             </motion.div>
           ))}
         </div>
@@ -307,17 +307,17 @@ function Sponsor({ t }) {
 
 function Reach({ t }) {
   return (
-    <section className="py-24 px-6 bg-black">
+    <section className="py-24 px-6 bg-gradient-to-b from-amber-50 to-orange-50/60">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-400 mb-6">{t.reach.heading}</h2>
-        <p className="text-center text-white/70 max-w-4xl mx-auto mb-12 leading-relaxed">{t.reach.intro}</p>
+        <h2 className="text-4xl md:text-5xl font-black text-center text-amber-700 mb-6">{t.reach.heading}</h2>
+        <p className="text-center text-stone-700 max-w-4xl mx-auto mb-12 leading-relaxed">{t.reach.intro}</p>
         <div className="grid md:grid-cols-2 gap-5">
           {t.reach.items.map((it, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-400/20 rounded-2xl p-7">
-              <h3 className="text-xl font-bold text-amber-300 mb-3">{it.t}</h3>
-              <p className="text-white/75 text-sm leading-relaxed">{it.d}</p>
+              className="bg-white border border-amber-200 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-bold text-amber-700 mb-3">{it.t}</h3>
+              <p className="text-stone-700 text-sm leading-relaxed">{it.d}</p>
             </motion.div>
           ))}
         </div>
@@ -328,10 +328,10 @@ function Reach({ t }) {
 
 function Footer({ t }) {
   return (
-    <footer className="py-12 px-6 text-center border-t border-white/10 bg-stone-950">
-      <h3 className="text-2xl md:text-3xl font-black bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-3">{t.footer.name}</h3>
-      <p className="text-white/60 text-sm md:text-base mb-4 max-w-2xl mx-auto">{t.footer.sub}</p>
-      <p className="text-white/40 text-xs">{t.footer.copy}</p>
+    <footer className="py-12 px-6 text-center border-t border-amber-200 bg-amber-50">
+      <h3 className="text-2xl md:text-3xl font-black bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-3">{t.footer.name}</h3>
+      <p className="text-stone-700 text-sm md:text-base mb-4 max-w-2xl mx-auto">{t.footer.sub}</p>
+      <p className="text-stone-500 text-xs">{t.footer.copy}</p>
     </footer>
   );
 }
@@ -339,7 +339,7 @@ function Footer({ t }) {
 export default function App() {
   const { lang, t, toggle } = useLang();
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-amber-50/40 text-stone-900">
       <Nav t={t} lang={lang} toggle={toggle} />
       <Hero t={t} />
       <Stats t={t} />

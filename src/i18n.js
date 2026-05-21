@@ -14,8 +14,8 @@ export const translations = {
     stats: [
       { n: '17', l: 'גיל' },
       { n: '#1', l: 'דירוג ישראל U18' },
-      { n: '5', l: 'מדליות בתחרויות' },
-      { n: 'י"ב', l: 'תלמיד' },
+      { n: '6', l: 'מדליות בתחרויות' },
+      { n: 'י"א', l: 'תלמיד' },
     ],
     about: {
       heading: 'אודות עומר',
@@ -124,8 +124,8 @@ export const translations = {
     stats: [
       { n: '17', l: 'Years Old' },
       { n: '#1', l: 'Israel U18 Rank' },
-      { n: '5', l: 'Competition Medals' },
-      { n: '12', l: 'Grade Student' },
+      { n: '6', l: 'Competition Medals' },
+      { n: '11', l: 'Grade Student' },
     ],
     about: {
       heading: 'About Omer',

@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: 'Heebo', 'Inter', system-ui, sans-serif; background: #0a0a0a; color: #fff; }
+body { margin: 0; font-family: 'Heebo', 'Inter', system-ui, sans-serif; background: #fffbf2; color: #1c1917; }
 #root { width: 100%; min-height: 100vh; }
 [dir="rtl"] { text-align: right; }
