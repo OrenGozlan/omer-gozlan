@@ -248,6 +248,7 @@ function Targets({ t }) {
   const tagColor = (tag) => {
     if (['לאומי', 'National'].includes(tag)) return 'bg-blue-100 border-blue-300 text-blue-800';
     if (['יבשתי', 'Continental'].includes(tag)) return 'bg-purple-100 border-purple-300 text-purple-800';
+    if (['סבב מקצועני', 'Pro Tour'].includes(tag)) return 'bg-emerald-100 border-emerald-300 text-emerald-800';
     return 'bg-amber-100 border-amber-300 text-amber-800';
   };
   return (
@@ -256,13 +257,18 @@ function Targets({ t }) {
         <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-3">{t.targets.heading}</h2>
         <p className="text-center text-stone-600 mb-12">{t.targets.sub}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-          {t.targets.items.map((it, i) => (
-            <div key={i} className="bg-amber-50/60 border border-amber-200 rounded-xl p-5 flex flex-col gap-2 hover:shadow-md transition-shadow">
-              <span className={`self-start text-xs font-bold px-2 py-1 rounded border ${tagColor(it.tag)}`}>{it.tag}</span>
-              <h3 className="text-xl font-bold mt-1 text-stone-800">{it.t}</h3>
-              <p className="text-stone-600 text-sm">{it.s}</p>
-            </div>
-          ))}
+          {t.targets.items.map((it, i) => {
+            const Wrap = it.href ? 'a' : 'div';
+            const wrapProps = it.href ? { href: it.href, target: '_blank', rel: 'noopener' } : {};
+            return (
+              <Wrap key={i} {...wrapProps}
+                className="bg-amber-50/60 border border-amber-200 rounded-xl p-5 flex flex-col gap-2 hover:-translate-y-1 hover:shadow-md hover:border-amber-400 transition-all">
+                <span className={`self-start text-xs font-bold px-2 py-1 rounded border ${tagColor(it.tag)}`}>{it.tag}</span>
+                <h3 className="text-xl font-bold mt-1 text-stone-800">{it.t}{it.href && <span className="text-amber-600 ms-1 text-sm">↗</span>}</h3>
+                <p className="text-stone-600 text-sm">{it.s}</p>
+              </Wrap>
+            );
+          })}
         </div>
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-2xl p-8 md:p-12 text-center shadow-2xl">
