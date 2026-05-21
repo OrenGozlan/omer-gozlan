@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
+import { Mail, Instagram, Star, Volleyball, Menu, X, Download, ChevronRight, Trophy, Medal, Award, MapPin } from 'lucide-react';
 import { useLang } from './i18n';
 
 const B = import.meta.env.BASE_URL;
@@ -103,11 +104,8 @@ function Nav({ t, lang, toggle }) {
               <button onClick={toggle} className="px-2 py-1 border border-amber-500 text-amber-700 rounded font-bold text-xs">
                 {lang === 'he' ? 'EN' : 'עב'}
               </button>
-              <button onClick={() => setOpen(o => !o)} aria-label="menu" className="p-2 text-stone-700">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  {open ? <><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></>
-                    : <><line x1="4" y1="7" x2="20" y2="7" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="17" x2="20" y2="17" /></>}
-                </svg>
+              <button onClick={() => setOpen(o => !o)} aria-label={open ? 'close menu' : 'open menu'} className="p-2 text-stone-700 focus-visible:ring-2 focus-visible:ring-amber-500 rounded">
+                {open ? <X size={24} strokeWidth={2.5} /> : <Menu size={24} strokeWidth={2.5} />}
               </button>
             </div>
           </div>
@@ -143,16 +141,30 @@ function Hero({ t }) {
       <div className="absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/50 to-stone-900/80" />
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
         className="relative z-10 text-center px-6 pt-20 max-w-5xl">
-        <div className="hero-text flex items-center justify-center gap-3 mb-6 text-amber-200 font-bold text-sm md:text-base">
-          <span className="bidi-iso">🏐</span><span>{t.hero.tagline}</span><span className="bidi-iso">🇮🇱</span>
+        <div className="hero-text inline-flex items-center justify-center gap-3 mb-6 text-amber-200 font-bold text-sm md:text-base uppercase tracking-widest">
+          <Volleyball size={20} className="text-amber-300" />
+          <span>{t.hero.tagline}</span>
+          <span className="text-base">🇮🇱</span>
         </div>
         <h1 className="font-display-en hero-text text-6xl md:text-9xl font-black mb-4 text-white leading-[0.9] uppercase">
           {t.hero.name}
         </h1>
         <p className="hero-text text-xl md:text-3xl text-amber-100 font-bold mb-6">{t.hero.sub}</p>
         <div className="inline-flex items-center gap-3 px-5 py-2 mb-6 bg-amber-500/20 backdrop-blur border border-amber-300/50 rounded-full">
+          <MapPin size={16} className="text-amber-300" />
           <span className="text-2xl md:text-3xl font-black text-amber-200 tabular-nums">{daysToDakar()}</span>
           <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-amber-100">{t.countdown.days} · {t.countdown.to_dakar}</span>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
+          {t.trust.map((item, i) => (
+            <span key={i} className="inline-flex items-center gap-1.5 text-xs md:text-sm font-bold uppercase tracking-wide text-amber-100/90">
+              {i === 0 && <Trophy size={14} />}
+              {i === 1 && <Medal size={14} />}
+              {i === 2 && <Award size={14} />}
+              {item}
+              {i < t.trust.length - 1 && <span className="text-amber-400/60 ms-2">·</span>}
+            </span>
+          ))}
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8">
           {t.hero.badges.map((b, i) => (
@@ -307,22 +319,26 @@ function Gallery({ t, lang }) {
       <div className="max-w-7xl mx-auto">
         <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight mb-12 text-center text-amber-800">{t.gallery.heading}</h2>
         {grouped.map(group => (
-          <div key={group.key} className="mb-12">
-            <h3 className="text-xl md:text-2xl font-bold text-amber-700 mb-5">{group.title}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-              {group.photos.map((img) => (
-                <button key={img.src} onClick={() => setLightbox(img)}
-                  className="relative overflow-hidden rounded-xl aspect-[3/4] group shadow-md hover:shadow-2xl transition-shadow text-start">
-                  <img src={img.src} alt={img[lang]} loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="md:hidden absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/85 to-transparent p-2.5">
-                    <span className="text-xs font-semibold text-white">{img[lang]}</span>
-                  </div>
-                  <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity items-end p-3">
-                    <span className="text-sm font-semibold text-white">{img[lang]}</span>
-                  </div>
-                </button>
-              ))}
+          <div key={group.key} className="mb-14">
+            <h3 className="font-display-en text-2xl md:text-3xl font-black uppercase tracking-tight text-amber-700 mb-5">{group.title}</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3 md:gap-4">
+              {group.photos.map((img, idx) => {
+                const big = idx === 0 && group.photos.length >= 3;
+                return (
+                  <button key={img.src} onClick={() => setLightbox(img)}
+                    className={`relative overflow-hidden rounded-xl group shadow-md hover:shadow-2xl transition-shadow text-start focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500
+                      ${big ? 'col-span-2 row-span-2' : ''}`}>
+                    <img src={img.src} alt={img[lang]} loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <div className="md:hidden absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/85 to-transparent p-2.5">
+                      <span className="text-xs font-semibold text-white">{img[lang]}</span>
+                    </div>
+                    <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity items-end p-3">
+                      <span className="text-sm font-semibold text-white">{img[lang]}</span>
+                    </div>
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}
@@ -333,7 +349,10 @@ function Gallery({ t, lang }) {
             onClick={() => setLightbox(null)}
             className="fixed inset-0 z-[100] bg-stone-950/95 flex items-center justify-center p-4 cursor-pointer">
             <button onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-2xl">×</button>
+              aria-label="close"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center focus-visible:ring-2 focus-visible:ring-amber-500">
+              <X size={24} />
+            </button>
             <motion.img initial={{ scale: 0.9 }} animate={{ scale: 1 }} src={lightbox.src} alt={lightbox[lang]}
               onClick={(e) => e.stopPropagation()}
               className="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain" />
@@ -383,26 +402,56 @@ function Reach({ t }) {
   );
 }
 
-function Sponsor({ t }) {
+function Sponsor({ t, lang }) {
   return (
-    <section id="sponsor" className="py-24 px-6 bg-white">
+    <section id="sponsor" className="py-24 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-4">{t.sponsor.heading}</h2>
-        <p className="text-center text-stone-700 mb-12 max-w-3xl mx-auto text-lg leading-relaxed">{t.sponsor.sub}</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-          {t.sponsor.items.map((it, i) => (
-            <div key={i} className="bg-amber-50/60 border border-amber-200 rounded-2xl p-6 hover:bg-amber-100/60 hover:shadow-md transition-all">
-              <div className="text-amber-500 text-3xl mb-3">★</div>
-              <h3 className="text-xl font-bold mb-2 text-stone-800">{it.t}</h3>
-              <p className="text-stone-700 text-sm leading-relaxed">{it.d}</p>
+        <p className="text-center text-stone-700 mb-10 max-w-3xl mx-auto text-lg leading-relaxed">{t.sponsor.sub}</p>
+
+        <h3 className="font-display-en text-2xl md:text-3xl font-black uppercase tracking-tight text-center text-stone-900 mb-2">{t.tiers_heading}</h3>
+        <p className="text-center text-stone-600 mb-10 max-w-2xl mx-auto">{t.tiers_sub}</p>
+
+        <div className="grid md:grid-cols-3 gap-5 mb-12 items-stretch">
+          {t.tiers.map((tier, i) => (
+            <div key={i} className={`relative flex flex-col rounded-2xl p-7 transition-all hover:-translate-y-1
+              ${tier.popular
+                ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white ring-4 ring-amber-300 shadow-2xl md:scale-105 z-10'
+                : 'bg-amber-50/60 border-2 border-amber-200 text-stone-900 hover:border-amber-400 hover:shadow-lg'}`}>
+              {tier.popular && (
+                <div className="absolute -top-3 inset-x-0 mx-auto w-fit px-4 py-1 bg-stone-900 text-amber-300 text-xs font-black uppercase tracking-widest rounded-full">
+                  ★ {lang === 'he' ? 'הפופולרי' : 'POPULAR'}
+                </div>
+              )}
+              <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${tier.popular ? 'text-amber-100' : 'text-amber-700'}`}>{tier.tagline}</div>
+              <h4 className={`font-display-en text-3xl md:text-4xl font-black uppercase mb-5 ${tier.popular ? 'text-white' : 'text-stone-900'}`}>{tier.name}</h4>
+              <ul className="space-y-3 mb-7 flex-1">
+                {tier.items.map((item, j) => (
+                  <li key={j} className="flex items-start gap-2.5 text-sm leading-snug">
+                    <ChevronRight size={16} className={`mt-0.5 flex-shrink-0 ${tier.popular ? 'text-amber-200' : 'text-amber-600'}`} />
+                    <span className={tier.popular ? 'text-amber-50' : 'text-stone-700'}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={`mailto:${EMAIL}?subject=${encodeURIComponent((lang === 'he' ? 'חסות — ' : 'Sponsorship — ') + tier.name)}`}
+                className={`block text-center px-5 py-3 rounded-full font-bold uppercase tracking-wide text-sm transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500
+                  ${tier.popular
+                    ? 'bg-white text-amber-700 hover:scale-105 shadow-lg'
+                    : 'bg-stone-900 text-white hover:bg-amber-700'}`}>
+                {tier.cta} →
+              </a>
             </div>
           ))}
         </div>
-        <div className="text-center">
-          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-10 py-5 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-            {t.nav.contact} →
-          </button>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+          {t.sponsor.items.map((it, i) => (
+            <div key={i} className="bg-stone-50 border border-stone-200 rounded-xl p-5 hover:border-amber-400 hover:bg-amber-50/40 transition-all">
+              <Star size={20} className="text-amber-500 mb-2" />
+              <h3 className="text-base font-bold mb-1 text-stone-800">{it.t}</h3>
+              <p className="text-stone-600 text-sm leading-relaxed">{it.d}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -417,13 +466,17 @@ function Contact({ t, lang }) {
         <p className="text-lg md:text-xl text-amber-50 mb-10 leading-relaxed">{t.contact.sub}</p>
         <div className="flex flex-col sm:flex-row items-stretch justify-center gap-3">
           <a href={`mailto:${EMAIL}?subject=${encodeURIComponent(lang === 'he' ? 'חסות לעומר גוזלן' : 'Sponsorship — Omer Gozlan')}`}
-            className="px-8 py-4 bg-white text-amber-700 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-            ✉ {t.contact.cta_email}
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-amber-700 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">
+            <Mail size={20} /> {t.contact.cta_email}
           </a>
           <a href={`https://instagram.com/${IG_OMER}`} target="_blank" rel="noopener"
-            className="px-8 py-4 bg-stone-900/20 backdrop-blur border-2 border-white text-white rounded-full font-bold text-lg hover:bg-stone-900/30 transition-colors">
-            📷 @{IG_OMER}
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-stone-900/20 backdrop-blur border-2 border-white text-white rounded-full font-bold text-lg hover:bg-stone-900/30 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">
+            <Instagram size={20} /> @{IG_OMER}
           </a>
+          <button onClick={() => window.print()} title={t.print}
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-stone-900/20 backdrop-blur border-2 border-white text-white rounded-full font-bold text-lg hover:bg-stone-900/30 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">
+            <Download size={20} /> {t.media_kit}
+          </button>
         </div>
         <p className="mt-8 text-amber-50/90 text-sm">
           <a href={`mailto:${EMAIL}`} className="underline hover:text-white">{EMAIL}</a>
@@ -440,9 +493,13 @@ function Footer({ t }) {
     <footer className="py-10 px-6 text-center border-t border-amber-200 bg-amber-50">
       <h3 className="text-2xl md:text-3xl font-black bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-3">{t.footer.name}</h3>
       <p className="text-stone-700 text-sm md:text-base mb-4 max-w-2xl mx-auto">{t.footer.sub}</p>
-      <div className="flex items-center justify-center gap-4 mb-4 text-sm">
-        <a href={`mailto:${EMAIL}`} className="text-amber-700 hover:text-amber-900 font-semibold">✉ {EMAIL}</a>
-        <a href={`https://instagram.com/${IG_OMER}`} target="_blank" rel="noopener" className="text-amber-700 hover:text-amber-900 font-semibold">📷 @{IG_OMER}</a>
+      <div className="flex items-center justify-center gap-5 mb-4 text-sm flex-wrap">
+        <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-1.5 text-amber-700 hover:text-amber-900 font-semibold focus-visible:ring-2 focus-visible:ring-amber-500 rounded">
+          <Mail size={16} /> {EMAIL}
+        </a>
+        <a href={`https://instagram.com/${IG_OMER}`} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-amber-700 hover:text-amber-900 font-semibold focus-visible:ring-2 focus-visible:ring-amber-500 rounded">
+          <Instagram size={16} /> @{IG_OMER}
+        </a>
       </div>
       <p className="text-stone-500 text-xs">{t.footer.copy}</p>
     </footer>
@@ -473,9 +530,10 @@ function StickyCTA({ t }) {
 export default function App() {
   const { lang, t, toggle } = useLang();
   return (
-    <div className="min-h-screen bg-amber-50/40 text-stone-900">
-      <Nav t={t} lang={lang} toggle={toggle} />
-      <StickyCTA t={t} />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-amber-50/40 text-stone-900">
+        <Nav t={t} lang={lang} toggle={toggle} />
+        <StickyCTA t={t} />
       <Hero t={t} />
       <Stats t={t} />
       <About t={t} />
@@ -485,9 +543,10 @@ export default function App() {
       <Gallery t={t} lang={lang} />
       <Vision t={t} />
       <Reach t={t} />
-      <Sponsor t={t} />
-      <Contact t={t} lang={lang} />
-      <Footer t={t} />
-    </div>
+        <Sponsor t={t} lang={lang} />
+        <Contact t={t} lang={lang} />
+        <Footer t={t} />
+      </div>
+    </MotionConfig>
   );
 }
