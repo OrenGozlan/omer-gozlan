@@ -7,7 +7,7 @@ const B = import.meta.env.BASE_URL;
 const P = (f) => `${B}photos/${f}`;
 const EMAIL = 'oren.gozlan@gmail.com';
 const IG_OMER = 'g0zlan_';
-const IG_TEAM = 'beachallvolleyball';
+const IG_TEAM = 'beachassvolleyball';
 
 const HERO_IMG = P('VIK_1692.jpg');
 
