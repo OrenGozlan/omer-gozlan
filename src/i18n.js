@@ -2,14 +2,16 @@ import { useEffect, useState } from 'react';
 
 export const translations = {
   he: {
-    nav: { about: 'אודות', record: 'הישגים', targets: 'יעדים 2026', gallery: 'גלריה', sponsor: 'חסות' },
+    nav: { about: 'אודות', record: 'הישגים', targets: 'יעדים 2026', gallery: 'גלריה', sponsor: 'חסות', contact: 'צרו קשר' },
     hero: {
       tagline: 'כדורעף חופים | נבחרת ישראל',
       name: 'עומר גוזלן',
       sub: 'הכוכב העולה של כדורעף החופים בישראל',
       badges: ['אלוף עוקב', '4 מדליות בינלאומיות', 'מכון וינגייט'],
-      blurb: 'בגיל 17 בלבד, עומר רושם היסטוריה כאחד הספורטאים הצעירים המבטיחים של ישראל, עם כישרון יוצא דופן המוכר בידי מאמני נבחרת ותוצאות בתחרויות בינלאומיות. בעקבות הצלחה מדהימה בטורנירי בוגרים בתחילת עונת 2026, מיקוד התחרויות של עומר משתנה והוא מתחיל להתמקד בסבב המקצועני לבוגרים — כולל 4 תחרויות מתוכננות בסין, בולגריה, הונגריה ואנגליה. כל זאת בנוסף לתחרויות המטרה בגילאי 18 ו-20.',
-      cta: 'צפו בהישגים',
+      blurb: 'בגיל 17 בלבד, עומר רושם היסטוריה כאחד הספורטאים הצעירים המבטיחים של ישראל. בעקבות הצלחה מדהימה בטורנירי בוגרים בתחילת עונת 2026, עומר מתחיל להתמקד בסבב המקצועני לבוגרים — כולל 4 תחרויות מתוכננות בסין, בולגריה, הונגריה ואנגליה, לצד תחרויות המטרה ב-U18 ו-U20 ואולימפיאדת הנוער דאקאר.',
+      blurb_short: 'הסיפור של ישראל בכדורעף החופים — מסע אל אולימפיאדת הנוער דאקאר 2026.',
+      cta: 'הצטרפו כשותפים',
+      cta2: 'צפו בהישגים',
     },
     stats: [
       { n: '17', l: 'גיל' },
@@ -84,8 +86,8 @@ export const translations = {
       ],
     },
     sponsor: {
-      heading: 'מדוע לתת חסות לעומר?',
-      sub: 'שותפות עם אלוף עולה — חלק ממסע ספורטיבי מעורר השראה',
+      heading: 'מטוסים לדאקאר 2026.',
+      sub: '4 מדינות. 6 טורנירים. אולימפיאדה אחת. אנחנו מרכיבים את צוות המותגים שיתעופף עם עומר — שלושה מקומות שותפים פנויים.',
       items: [
         { t: 'כוכב עולה', d: 'שותפות עם ספורטאי בתחילת קריירה בינלאומית מבטיחה' },
         { t: 'קהל צעיר', d: 'חיבור לקהל אוהדי ספורט נוער ומשפחותיהם ברחבי ישראל' },
@@ -105,6 +107,12 @@ export const translations = {
         { t: 'אולימפיאדת נוער דאקאר 2026', d: 'כדורעף משוחק באתרים כמו Dakar Arena (קיבולת 7,500), עם מעורבות של 60,000+ משתתפים. חסויות נהנות משותפויות מדיה של ה-IOC והגברה ברשתות חברתיות.' },
       ],
     },
+    contact: {
+      heading: 'בואו לדבר',
+      sub: 'מחפשים שותף לדרך לדאקאר 2026? צרו קשר — נשלח לכם את חבילת החסות.',
+      cta_email: 'שלחו אימייל',
+      cta_ig: 'עקבו באינסטגרם',
+    },
     footer: {
       name: 'עומר גוזלן',
       sub: 'נבחרת ישראל לכדורעף חופים | המכללה למצוינות בספורט, מכון וינגייט',
@@ -112,14 +120,16 @@ export const translations = {
     },
   },
   en: {
-    nav: { about: 'About', record: 'Record', targets: '2026 Targets', gallery: 'Gallery', sponsor: 'Sponsor' },
+    nav: { about: 'About', record: 'Record', targets: '2026 Targets', gallery: 'Gallery', sponsor: 'Sponsor', contact: 'Get in Touch' },
     hero: {
       tagline: 'Beach Volleyball | Team Israel',
       name: 'OMER GOZLAN',
       sub: 'Rising Star of Israeli Beach Volleyball',
       badges: ['Back-to-Back Champion', '4x International Medalist', 'Wingate Institute'],
-      blurb: 'At just 17 years old, Omer is making history as one of Israel\'s most promising young athletes, with exceptional talent recognized by national coaches and international competition results. Following remarkable success in adult tournaments at the start of the 2026 season, Omer is shifting focus toward the professional adults circuit — including 4 planned events in China, Bulgaria, Hungary, and England, alongside his target U18 and U20 competitions.',
-      cta: 'View Achievements',
+      blurb: 'Israel\'s #1 U18 beach volleyball player. 6 international medals by 17. Following breakout wins on the adult tour in early 2026, Omer is now stepping onto the pro adults circuit — 4 events in China, Bulgaria, Hungary, and England, alongside his target U18, U20, and Dakar 2026 Youth Olympics campaigns.',
+      blurb_short: 'Israel\'s beach volleyball story — on the road to Dakar 2026 Youth Olympics.',
+      cta: 'Become a Partner',
+      cta2: 'View Achievements',
     },
     stats: [
       { n: '17', l: 'Years Old' },
@@ -178,7 +188,7 @@ export const translations = {
     },
     testimonial: {
       heading: 'Expert Recognition',
-      quote: '"There has never been a 10th-grade student with two European medals. Omer is an exceptional talent — a young athlete with maturity, perseverance, and an unshakable belief in his path."',
+      quote: '"There has never been an 11th-grade student with two European medals. Omer is an exceptional talent — a young athlete with maturity, perseverance, and an unshakable belief in his path."',
       author: 'Eyal Aharonson',
       role: 'Director, Academy for Excellence in Sports, Wingate Institute',
     },
@@ -194,8 +204,8 @@ export const translations = {
       ],
     },
     sponsor: {
-      heading: 'Why Sponsor Omer?',
-      sub: 'Partner with a rising champion and be part of an inspiring athletic journey',
+      heading: 'Fly with Omer in 2026.',
+      sub: 'Four countries. Six tournaments. One Youth Olympics. We\'re assembling the brand team now — three partner slots remain.',
       items: [
         { t: 'Rising Star', d: 'Partner with an athlete at the beginning of a promising international career' },
         { t: 'Young Audience', d: 'Connect with youth sports enthusiasts and their families across Israel' },
@@ -214,6 +224,12 @@ export const translations = {
         { t: 'FIVB World Championships (U18/U20, Netherlands 2026)', d: 'Past FIVB U18/U20 World Championships generated 19 million YouTube views, 2.15 million watch hours, and peaks of 131,500 concurrent viewers per match. Finals draw millions in key markets like Italy and Poland (5+ million combined). Hosting in the Netherlands boosts local attendance potential, with global streaming amplifying sponsor branding.' },
         { t: 'European Championships & Youth Olympics', d: 'European U18/U20 Championships mirror CEV figures with similar venue sizes and regional TV reach. The 2026 Youth Olympics in Dakar include volleyball at venues like Dakar Arena (7,500 capacity), engaging 60,000+ participants in past Olympic volleyball experiences and building youth-focused global buzz. Sponsors benefit from IOC media partnerships and social amplification.' },
       ],
+    },
+    contact: {
+      heading: 'Let\'s talk.',
+      sub: 'Looking to partner with Omer on the road to Dakar 2026? Get in touch — we\'ll send the sponsorship deck.',
+      cta_email: 'Email Us',
+      cta_ig: 'Follow on Instagram',
     },
     footer: {
       name: 'OMER GOZLAN',

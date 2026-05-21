@@ -7,4 +7,5 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: 'Heebo', 'Inter', system-ui, sans-serif; background: #fffbf2; color: #1c1917; }
 #root { width: 100%; min-height: 100vh; }
-[dir="rtl"] { text-align: right; }
+.hero-text { text-shadow: 0 2px 16px rgba(0,0,0,0.65), 0 1px 3px rgba(0,0,0,0.5); }
+.bidi-iso { unicode-bidi: isolate; }
