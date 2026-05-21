@@ -88,8 +88,8 @@ export const translations = {
       ],
     },
     sponsor: {
-      heading: 'מטוסים לדאקאר 2026.',
-      sub: '4 מדינות. 6 טורנירים. אולימפיאדה אחת. אנחנו מרכיבים את צוות המותגים שיתעופף עם עומר — שלושה מקומות שותפים פנויים.',
+      heading: 'הצטרפו לעומר במסע.',
+      sub: '2026 ומעבר — אל הבמות הגדולות בכדורעף החופים העולמי. בואו לבנות יחד.',
       items: [
         { t: 'כוכב עולה', d: 'שותפות עם ספורטאי בתחילת קריירה בינלאומית מבטיחה' },
         { t: 'קהל צעיר', d: 'חיבור לקהל אוהדי ספורט נוער ומשפחותיהם ברחבי ישראל' },
@@ -109,7 +109,7 @@ export const translations = {
         { t: 'אולימפיאדת נוער דאקאר 2026', d: 'כדורעף משוחק באתרים כמו Dakar Arena (קיבולת 7,500), עם מעורבות של 60,000+ משתתפים. חסויות נהנות משותפויות מדיה של ה-IOC והגברה ברשתות חברתיות.' },
       ],
     },
-    countdown: { days: 'ימים', to_dakar: 'עד דאקאר 2026' },
+    tagline_pill: '2026 ומעבר · אל הבמות הגדולות בענף',
     sticky_cta: 'הצטרפו כשותפים',
     trust: ['#1 ישראל U18 ו-U20', 'זהב CEV אומות 2026', 'נבחרת ישראל · וינגייט'],
     tiers_heading: 'חבילות חסות',
@@ -236,8 +236,8 @@ export const translations = {
       ],
     },
     sponsor: {
-      heading: 'Fly with Omer in 2026.',
-      sub: 'Four countries. Six tournaments. One Youth Olympics. We\'re assembling the brand team now — three partner slots remain.',
+      heading: 'Partner with Omer.',
+      sub: '2026 and beyond — onto the biggest stages in world beach volleyball. Let\'s build it together.',
       items: [
         { t: 'Rising Star', d: 'Partner with an athlete at the beginning of a promising international career' },
         { t: 'Young Audience', d: 'Connect with youth sports enthusiasts and their families across Israel' },
@@ -257,7 +257,7 @@ export const translations = {
         { t: 'European Championships & Youth Olympics', d: 'European U18/U20 Championships mirror CEV figures with similar venue sizes and regional TV reach. The 2026 Youth Olympics in Dakar include volleyball at venues like Dakar Arena (7,500 capacity), engaging 60,000+ participants in past Olympic volleyball experiences and building youth-focused global buzz. Sponsors benefit from IOC media partnerships and social amplification.' },
       ],
     },
-    countdown: { days: 'DAYS', to_dakar: 'TO DAKAR 2026' },
+    tagline_pill: '2026 & BEYOND · ONTO THE BIGGEST STAGES IN THE SPORT',
     sticky_cta: 'Become a Partner',
     trust: ['#1 Israel U18 & U20', 'Gold · CEV Nations Cup 2026', 'Team Israel · Wingate Academy'],
     tiers_heading: 'Partnership Tiers',

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
-import { Mail, Instagram, Star, Volleyball, Menu, X, Download, ChevronRight, Trophy, Medal, Award, MapPin } from 'lucide-react';
+import { Mail, Instagram, Star, Volleyball, Menu, X, Trophy, Medal, Award } from 'lucide-react';
 import { useLang } from './i18n';
 
 const B = import.meta.env.BASE_URL;
@@ -10,8 +10,6 @@ const IG_OMER = 'g0zlan_';
 const IG_TEAM = 'beachallvolleyball';
 
 const HERO_IMG = P('VIK_1692.jpg');
-const DAKAR_DATE = new Date('2026-10-31T00:00:00Z');
-const daysToDakar = () => Math.max(0, Math.ceil((DAKAR_DATE - new Date()) / 86400000));
 
 const GALLERY = [
   { src: P('VIK_0434.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
@@ -150,10 +148,8 @@ function Hero({ t }) {
           {t.hero.name}
         </h1>
         <p className="hero-text text-xl md:text-3xl text-amber-100 font-bold mb-6">{t.hero.sub}</p>
-        <div className="inline-flex items-center gap-3 px-5 py-2 mb-6 bg-amber-500/20 backdrop-blur border border-amber-300/50 rounded-full">
-          <MapPin size={16} className="text-amber-300" />
-          <span className="text-2xl md:text-3xl font-black text-amber-200 tabular-nums">{daysToDakar()}</span>
-          <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-amber-100">{t.countdown.days} · {t.countdown.to_dakar}</span>
+        <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 mb-6 bg-amber-500/20 backdrop-blur border border-amber-300/50 rounded-full">
+          <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-amber-100">{t.tagline_pill}</span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
           {t.trust.map((item, i) => (
@@ -402,56 +398,26 @@ function Reach({ t }) {
   );
 }
 
-function Sponsor({ t, lang }) {
+function Sponsor({ t }) {
   return (
     <section id="sponsor" className="py-24 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-4">{t.sponsor.heading}</h2>
-        <p className="text-center text-stone-700 mb-10 max-w-3xl mx-auto text-lg leading-relaxed">{t.sponsor.sub}</p>
-
-        <h3 className="font-display-en text-2xl md:text-3xl font-black uppercase tracking-tight text-center text-stone-900 mb-2">{t.tiers_heading}</h3>
-        <p className="text-center text-stone-600 mb-10 max-w-2xl mx-auto">{t.tiers_sub}</p>
-
-        <div className="grid md:grid-cols-3 gap-5 mb-12 items-stretch">
-          {t.tiers.map((tier, i) => (
-            <div key={i} className={`relative flex flex-col rounded-2xl p-7 transition-all hover:-translate-y-1
-              ${tier.popular
-                ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white ring-4 ring-amber-300 shadow-2xl md:scale-105 z-10'
-                : 'bg-amber-50/60 border-2 border-amber-200 text-stone-900 hover:border-amber-400 hover:shadow-lg'}`}>
-              {tier.popular && (
-                <div className="absolute -top-3 inset-x-0 mx-auto w-fit px-4 py-1 bg-stone-900 text-amber-300 text-xs font-black uppercase tracking-widest rounded-full">
-                  ★ {lang === 'he' ? 'הפופולרי' : 'POPULAR'}
-                </div>
-              )}
-              <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${tier.popular ? 'text-amber-100' : 'text-amber-700'}`}>{tier.tagline}</div>
-              <h4 className={`font-display-en text-3xl md:text-4xl font-black uppercase mb-5 ${tier.popular ? 'text-white' : 'text-stone-900'}`}>{tier.name}</h4>
-              <ul className="space-y-3 mb-7 flex-1">
-                {tier.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2.5 text-sm leading-snug">
-                    <ChevronRight size={16} className={`mt-0.5 flex-shrink-0 ${tier.popular ? 'text-amber-200' : 'text-amber-600'}`} />
-                    <span className={tier.popular ? 'text-amber-50' : 'text-stone-700'}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href={`mailto:${EMAIL}?subject=${encodeURIComponent((lang === 'he' ? 'חסות — ' : 'Sponsorship — ') + tier.name)}`}
-                className={`block text-center px-5 py-3 rounded-full font-bold uppercase tracking-wide text-sm transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500
-                  ${tier.popular
-                    ? 'bg-white text-amber-700 hover:scale-105 shadow-lg'
-                    : 'bg-stone-900 text-white hover:bg-amber-700'}`}>
-                {tier.cta} →
-              </a>
+        <p className="text-center text-stone-700 mb-12 max-w-3xl mx-auto text-lg leading-relaxed">{t.sponsor.sub}</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          {t.sponsor.items.map((it, i) => (
+            <div key={i} className="bg-amber-50/60 border border-amber-200 rounded-2xl p-6 hover:-translate-y-1 hover:bg-amber-100/60 hover:border-amber-400 hover:shadow-lg transition-all">
+              <Star size={28} className="text-amber-500 mb-3" />
+              <h3 className="text-xl font-bold mb-2 text-stone-800">{it.t}</h3>
+              <p className="text-stone-700 text-sm leading-relaxed">{it.d}</p>
             </div>
           ))}
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-          {t.sponsor.items.map((it, i) => (
-            <div key={i} className="bg-stone-50 border border-stone-200 rounded-xl p-5 hover:border-amber-400 hover:bg-amber-50/40 transition-all">
-              <Star size={20} className="text-amber-500 mb-2" />
-              <h3 className="text-base font-bold mb-1 text-stone-800">{it.t}</h3>
-              <p className="text-stone-600 text-sm leading-relaxed">{it.d}</p>
-            </div>
-          ))}
+        <div className="text-center">
+          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-10 py-5 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-black uppercase tracking-wide text-lg hover:scale-105 transition-transform shadow-xl focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500">
+            {t.nav.contact} →
+          </button>
         </div>
       </div>
     </section>
@@ -473,10 +439,6 @@ function Contact({ t, lang }) {
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-stone-900/20 backdrop-blur border-2 border-white text-white rounded-full font-bold text-lg hover:bg-stone-900/30 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">
             <Instagram size={20} /> @{IG_OMER}
           </a>
-          <button onClick={() => window.print()} title={t.print}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-stone-900/20 backdrop-blur border-2 border-white text-white rounded-full font-bold text-lg hover:bg-stone-900/30 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">
-            <Download size={20} /> {t.media_kit}
-          </button>
         </div>
         <p className="mt-8 text-amber-50/90 text-sm">
           <a href={`mailto:${EMAIL}`} className="underline hover:text-white">{EMAIL}</a>
@@ -543,7 +505,7 @@ export default function App() {
       <Gallery t={t} lang={lang} />
       <Vision t={t} />
       <Reach t={t} />
-        <Sponsor t={t} lang={lang} />
+        <Sponsor t={t} />
         <Contact t={t} lang={lang} />
         <Footer t={t} />
       </div>
