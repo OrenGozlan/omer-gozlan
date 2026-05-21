@@ -8,7 +8,7 @@ export const translations = {
       name: 'עומר גוזלן',
       sub: 'הכוכב העולה של כדורעף החופים בישראל',
       badges: ['אלוף עוקב', '4 מדליות בינלאומיות', 'מכון וינגייט'],
-      blurb: 'בגיל 17 בלבד, עומר רושם היסטוריה כאחד הספורטאים הצעירים המבטיחים של ישראל, עם כישרון יוצא דופן המוכר בידי מאמני נבחרת ותוצאות בתחרויות בינלאומיות.',
+      blurb: 'בגיל 17 בלבד, עומר רושם היסטוריה כאחד הספורטאים הצעירים המבטיחים של ישראל, עם כישרון יוצא דופן המוכר בידי מאמני נבחרת ותוצאות בתחרויות בינלאומיות. בעקבות הצלחה מדהימה בטורנירי בוגרים בתחילת עונת 2026, מיקוד התחרויות של עומר משתנה והוא מתחיל להתמקד בסבב המקצועני לבוגרים — כולל 4 תחרויות מתוכננות בסין, בולגריה, הונגריה ואנגליה. כל זאת בנוסף לתחרויות המטרה בגילאי 18 ו-20.',
       cta: 'צפו בהישגים',
     },
     stats: [
@@ -118,7 +118,7 @@ export const translations = {
       name: 'OMER GOZLAN',
       sub: 'Rising Star of Israeli Beach Volleyball',
       badges: ['Back-to-Back Champion', '4x International Medalist', 'Wingate Institute'],
-      blurb: 'At just 17 years old, Omer is making history as one of Israel\'s most promising young athletes, with exceptional talent recognized by national coaches and international competition results.',
+      blurb: 'At just 17 years old, Omer is making history as one of Israel\'s most promising young athletes, with exceptional talent recognized by national coaches and international competition results. Following remarkable success in adult tournaments at the start of the 2026 season, Omer is shifting focus toward the professional adults circuit — including 4 planned events in China, Bulgaria, Hungary, and England, alongside his target U18 and U20 competitions.',
       cta: 'View Achievements',
     },
     stats: [
