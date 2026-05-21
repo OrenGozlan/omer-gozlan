@@ -15,7 +15,7 @@ export const translations = {
     },
     stats: [
       { n: '17', l: 'גיל' },
-      { n: '#1', l: 'דירוג ישראל U18' },
+      { n: '#1', l: 'דירוג ישראל U18 ו-U20' },
       { n: '6', l: 'מדליות בתחרויות' },
       { n: 'י"א', l: 'תלמיד' },
     ],
@@ -36,6 +36,8 @@ export const translations = {
       s2026: [
         { rank: '#1', title: 'גביע אומות CEV 2026', sub: 'בוגרים — מקום ראשון' },
         { rank: '#2', title: 'גביע לאומי הונגריה 2026', sub: 'בוגרים — מקום שני' },
+        { rank: '#1', title: 'דירוג ישראל U20', sub: 'מקום ראשון' },
+        { rank: '#1', title: 'דירוג ישראל U18', sub: 'מקום ראשון' },
       ],
       s2025: [
         { rank: '#1', title: 'אליפות ישראל U18 2025', sub: 'מקום ראשון' },
@@ -135,7 +137,7 @@ export const translations = {
     },
     stats: [
       { n: '17', l: 'Years Old' },
-      { n: '#1', l: 'Israel U18 Rank' },
+      { n: '#1', l: 'Israel U18 & U20 Rank' },
       { n: '6', l: 'Competition Medals' },
       { n: '11', l: 'Grade Student' },
     ],
@@ -156,6 +158,8 @@ export const translations = {
       s2026: [
         { rank: '#1', title: 'CEV Nations Cup 2026', sub: 'Adults — 1st Place' },
         { rank: '#2', title: 'Hungary National Cup 2026', sub: 'Adults — 2nd Place' },
+        { rank: '#1', title: 'Israel U20 Ranking', sub: '1st Place' },
+        { rank: '#1', title: 'Israel U18 Ranking', sub: '1st Place' },
       ],
       s2025: [
         { rank: '#1', title: '2025 Israel Championship', sub: 'Israel U18' },
