@@ -1,0 +1,43 @@
+region,country,city,org_name,type,reach_estimate,contact_url,why_target,priority
+NA,USA,National,Maccabi USA,Jewish-sport org,large national network,maccabiusa.com,Funds Jewish athletes for Maccabiah; possible 501c3 host; donor list,A
+NA,USA,National,Friends of IDF (FIDF),Diaspora-Israel org,large national network,fidf.org,Israel-flag-abroad narrative; gala fundraising machine,B
+NA,USA,National,JNF-USA (Jewish National Fund),Diaspora-Israel org,large national network,jnf.org,Occasional youth-sport grants; large Israel-oriented donor base,B
+NA,USA,National,PEF Israel Endowment Funds,501c3 fiscal sponsor,n/a,pefisrael.org,Passes US tax-deductible money to Israeli individuals — vehicle host,A
+NA,USA,New York,UJA Federation of New York,Federation,largest in world $250M+/yr,ujafedny.org,Largest Jewish community in diaspora; Israel-engagement fund,A
+NA,USA,New York,Israeli-American Council (IAC) NY,Diaspora chapter,~15K Israeli-Americans,israeliamerican.org,Direct Israeli expat community,A
+NA,USA,Los Angeles,Jewish Federation of Greater LA,Federation,~617K Jews in LA,jewishla.org,Second largest US Jewish community,A
+NA,USA,Los Angeles,IAC Los Angeles,Diaspora chapter,large LA Israeli expat hub,israeliamerican.org,Israeli expat density,A
+NA,USA,Miami,Greater Miami Jewish Federation,Federation,~250K Jews,jewishmiami.org,Hispanic + Israeli population overlap with LatAm reach,A
+NA,USA,Miami,IAC Miami,Diaspora chapter,growing,israeliamerican.org,LatAm gateway + Israeli expat community,B
+NA,USA,Boston,Combined Jewish Philanthropies (CJP) Boston,Federation,~250K Jews,cjp.org,Top-5 US Jewish community,B
+NA,USA,South Florida,Jewish Federation S. Palm Beach County,Federation,~125K Jews,jewishboca.org,Wealthy retired donor demographic,B
+NA,USA,Chicago,Jewish United Fund of Chicago (JUF),Federation,~300K Jews,juf.org,Top-5 US Jewish community,B
+NA,USA,Atlanta,Jewish Federation of Greater Atlanta,Federation,~120K Jews,jewishatlanta.org,South US Jewish hub,C
+NA,Canada,Toronto,UJA Federation of Greater Toronto,Federation,~190K Jews,jewishtoronto.com,Largest Canadian Jewish community,A
+NA,Canada,Montreal,Federation CJA Montreal,Federation,~90K Jews,federationcja.org,French + English bilingual outreach,B
+NA,Canada,National,Maccabi Canada,Jewish-sport org,national,maccabicanada.com,Direct athlete-sport pipeline; Maccabiah selection,A
+LATAM,Mexico,Mexico City,Comité Central Israelita de México (CCIM),Community council,~40K Jews,tribuna.org.il,Wealthy concentrated community,A
+LATAM,Mexico,Mexico City,Maccabi Mexico,Jewish-sport org,~5K members,maccabi.org.mx,Sport-specific donor list,A
+LATAM,Argentina,Buenos Aires,AMIA (Asoc. Mutual Israelita Argentina),Community council,~180K Jews,amia.org.ar,Largest LatAm Jewish community,A
+LATAM,Argentina,Buenos Aires,Maccabi Argentina,Jewish-sport org,large,maccabi.org.ar,Sport-specific donor list; club Nautico Hacoaj overlap,A
+LATAM,Argentina,Buenos Aires,DAIA (Delegación Asoc. Israelitas Argentinas),Umbrella org,national,daia.org.ar,Endorsement amplifier,B
+LATAM,Brazil,Sao Paulo,CONIB (Confederação Israelita do Brasil),Umbrella org,~120K Jews national,conib.org.br,Brazilian Jewish umbrella,A
+LATAM,Brazil,Sao Paulo,Federação Israelita do Estado de São Paulo (FISESP),Federation,~70K Jews in SP,fisesp.org.br,Largest BR community,A
+LATAM,Brazil,Sao Paulo,Maccabi Brasil,Jewish-sport org,large,maccabi.org.br,Sport-specific donor list,A
+LATAM,Brazil,Rio de Janeiro,Federação Israelita do Rio de Janeiro (FIERJ),Federation,~25K Jews,fierj.org.br,RJ community,B
+LATAM,Panama,Panama City,Consejo Central Comunitario Hebreo de Panamá,Community council,~10K Jews wealthy,kolshearith.com,Small but very wealthy community,A
+LATAM,Colombia,Bogota,Confederación de Asoc. Judías de Colombia (CAJC),Community council,~3K Jews,cajc.org.co,Active community willing to support Israel,B
+LATAM,Chile,Santiago,Comunidad Judía de Chile,Community council,~18K Jews,cjch.cl,Stable concentrated community,B
+LATAM,Uruguay,Montevideo,Comité Central Israelita del Uruguay,Community council,~17K Jews,ccisrael.com.uy,Active Israel-engagement community,C
+LATAM,Venezuela,Caracas,Confederación Asoc. Israelitas de Venezuela (CAIV),Community council,~6K Jews,caiv.org,Small declining but engaged,C
+CENTRAL,Costa Rica,San Jose,Centro Israelita Sionista de Costa Rica,Community council,~3K Jews,centroisraelitacr.com,Small wealthy community,C
+CENTRAL,Guatemala,Guatemala City,Comunidad Judía de Guatemala,Community council,~1K Jews,n/a,Small but accessible,C
+NA,USA,National,Jewish Telegraphic Agency (JTA),Press,large reach,jta.org,Press placement for campaign launch,A
+NA,USA,National,Jewish Insider,Press,niche elite reach,jewishinsider.com,Elite donor/influencer reach,A
+NA,USA,National,eJewish Philanthropy,Press,philanthropy-sector reach,ejewishphilanthropy.com,Reaches federations & major donors,A
+LATAM,Argentina,Buenos Aires,Aurora Israel,Press (Spanish),major LatAm Jewish news,aurora-israel.co.il,Spanish-language amplifier,A
+LATAM,Mexico,Mexico City,ENLACE Judío,Press (Spanish),major LatAm Jewish news,enlacejudio.com,Mexico + LatAm coverage,A
+LATAM,Brazil,Sao Paulo,Conexão Israel,Press (Portuguese),BR Jewish media,conexaoisrael.org,Brazilian Portuguese reach,B
+PLATFORM,n/a,n/a,Charidy,Crowdfunding platform,n/a,charidy.com,Primary platform — Jewish/Israeli match-a-thon,A
+PLATFORM,n/a,n/a,Causematch,Crowdfunding platform,n/a,causematch.com,Backup platform option,B
+PLATFORM,n/a,n/a,GoFundMe,Crowdfunding platform,n/a,gofundme.com,Secular mirror campaign,B
