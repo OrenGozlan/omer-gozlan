@@ -12,6 +12,7 @@ const IG_TEAM = 'beachassvolleyball';
 const HERO_IMG = P('VIK_1692.jpg');
 
 const GALLERY = [
+  { src: P('VIK_1692.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
   { src: P('VIK_0434.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
   { src: P('VIK_0475.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
   { src: P('VIK_0504.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
