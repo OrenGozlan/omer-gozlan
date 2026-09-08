@@ -66,7 +66,6 @@ export const translations = {
       sub: 'הדרך עד כה — ומה הבא בתור',
       items: [
         { t: 'אליפות אירופה U22', s: 'CEV U22 European Championship · 9-13 ספט 2026 · מדורג #7', tag: 'יבשתי', res: 'הבא בתור', next: true },
-        { t: 'פוצ׳ה (איזמיר), טורקיה', s: 'אליפות אירופה CEV U18 · 17-20 ספט 2026', tag: 'יבשתי', res: 'יעד', next: true, href: 'https://www.cev.eu/beach/agegroups/2026/u18' },
         { t: 'באטיפליה, איטליה', s: 'אליפות אירופה CEV U20 · 3-6 ספט 2026', tag: 'יבשתי', res: 'מקום 13', href: 'https://www.cev.eu/beach/agegroups/2026/u20/' },
         { t: 'ישראל U18', s: 'אליפות ישראל · אוגוסט 2026', tag: 'לאומי', res: '🥇 אלוף ישראל' },
         { t: 'ישראל בוגרים', s: 'אליפות ישראל לבוגרים · אוגוסט 2026', tag: 'לאומי', res: '🥉 ארד' },
@@ -226,7 +225,6 @@ export const translations = {
       sub: 'The road so far — and what comes next',
       items: [
         { t: 'CEV U22 European Championship', s: 'Sep 9-13, 2026 · seeded #7', tag: 'Continental', res: 'Up Next', next: true },
-        { t: 'Foça (Izmir), Türkiye', s: 'CEV U18 European Championship · Sep 17-20, 2026', tag: 'Continental', res: 'Target', next: true, href: 'https://www.cev.eu/beach/agegroups/2026/u18' },
         { t: 'Battipaglia, Italy', s: 'CEV U20 European Championship · Sep 3-6, 2026', tag: 'Continental', res: '13th', href: 'https://www.cev.eu/beach/agegroups/2026/u20/' },
         { t: 'Israel U18', s: 'National Championship · Aug 2026', tag: 'National', res: '🥇 Champion' },
         { t: 'Israel Adults', s: 'National Championship · Aug 2026', tag: 'National', res: '🥉 Bronze' },
