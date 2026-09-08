@@ -263,8 +263,13 @@ function Targets({ t }) {
             const wrapProps = it.href ? { href: it.href, target: '_blank', rel: 'noopener' } : {};
             return (
               <Wrap key={i} {...wrapProps}
-                className="bg-amber-50/60 border border-amber-200 rounded-xl p-5 flex flex-col gap-2 hover:-translate-y-1 hover:shadow-md hover:border-amber-400 transition-all">
-                <span className={`self-start text-xs font-bold px-2 py-1 rounded border ${tagColor(it.tag)}`}>{it.tag}</span>
+                className={`border rounded-xl p-5 flex flex-col gap-2 hover:-translate-y-1 hover:shadow-md transition-all ${it.next ? 'bg-white border-amber-400 ring-2 ring-amber-300/60 hover:border-amber-500' : 'bg-amber-50/60 border-amber-200 hover:border-amber-400'}`}>
+                <div className="flex items-center justify-between gap-2">
+                  <span className={`text-xs font-bold px-2 py-1 rounded border ${tagColor(it.tag)}`}>{it.tag}</span>
+                  {it.res && (
+                    <span className={`text-xs font-black px-2.5 py-1 rounded-full border ${it.next ? 'bg-stone-900 border-stone-900 text-amber-300 animate-pulse' : 'bg-gradient-to-r from-amber-500 to-orange-600 border-transparent text-white'}`}>{it.res}</span>
+                  )}
+                </div>
                 <h3 className="text-xl font-bold mt-1 text-stone-800">{it.t}{it.href && <span className="text-amber-600 ms-1 text-sm">↗</span>}</h3>
                 <p className="text-stone-600 text-sm">{it.s}</p>
               </Wrap>
