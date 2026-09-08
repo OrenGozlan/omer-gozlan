@@ -257,7 +257,7 @@ function Targets({ t }) {
       <div className="max-w-6xl mx-auto">
         <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-3">{t.targets.heading}</h2>
         <p className="text-center text-stone-600 mb-12">{t.targets.sub}</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+        <div className="grid gap-4 mb-12 max-w-xl mx-auto">
           {t.targets.items.map((it, i) => {
             const Wrap = it.href ? 'a' : 'div';
             const wrapProps = it.href ? { href: it.href, target: '_blank', rel: 'noopener' } : {};

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 export const translations = {
   he: {
-    nav: { about: 'אודות', record: 'הישגים', targets: 'עונת 2026', gallery: 'גלריה', sponsor: 'חסות', contact: 'צרו קשר' },
+    nav: { about: 'אודות', record: 'הישגים', targets: 'מה הבא', gallery: 'גלריה', sponsor: 'חסות', contact: 'צרו קשר' },
     hero: {
       tagline: 'כדורעף חופים | נבחרת ישראל',
       name: 'עומר גוזלן',
@@ -62,18 +62,10 @@ export const translations = {
       progression: 'עומר עולה כיתה — מנוער לבוגרים, מגביעים ארציים לאליפויות אירופה ולסבב המקצועני העולמי. 2026: 7 פודיומים, 2 תארים בינלאומיים, ובכורה ב-Beach Pro Tour. כל טורניר צעד נוסף לעבר הצמרת העולמית.',
     },
     targets: {
-      heading: 'עונת 2026',
-      sub: 'הדרך עד כה — ומה הבא בתור',
+      heading: 'מה הבא',
+      sub: 'התחנה הבאה במסע — ומעבר לה',
       items: [
         { t: 'אליפות אירופה U22', s: 'CEV U22 European Championship · 9-13 ספט 2026 · מדורג #7', tag: 'יבשתי', res: 'הבא בתור', next: true },
-        { t: 'באטיפליה, איטליה', s: 'אליפות אירופה CEV U20 · 3-6 ספט 2026', tag: 'יבשתי', res: 'מקום 13', href: 'https://www.cev.eu/beach/agegroups/2026/u20/' },
-        { t: 'ישראל U18', s: 'אליפות ישראל · אוגוסט 2026', tag: 'לאומי', res: '🥇 אלוף ישראל' },
-        { t: 'ישראל בוגרים', s: 'אליפות ישראל לבוגרים · אוגוסט 2026', tag: 'לאומי', res: '🥉 ארד' },
-        { t: 'פינגטן, סין', s: 'Beach Pro Tour Futures · אוגוסט 2026', tag: 'סבב מקצועני', res: 'מקום 17 · בכורה' },
-        { t: 'רמרשן, לוקסמבורג', s: 'MEVZA Zonal Tour · אוגוסט 2026', tag: 'יבשתי', res: 'מקום 9' },
-        { t: 'לימסול, קפריסין', s: 'אליפות MEVZA U20 · יולי 2026', tag: 'יבשתי', res: '🥇 זהב' },
-        { t: 'הונגריה', s: 'גביע הונגריה לבוגרים · יוני 2026', tag: 'בינלאומי', res: '🥈 כסף' },
-        { t: 'קפריסין', s: 'גביע אומות CEV · בית B · מאי 2026', tag: 'יבשתי', res: '🥇 זהב', href: 'https://www.cev.eu/beach/nations-cup/2026/' },
       ],
       done_h: 'תוצאה',
       olympic_h: '🏅 המשחקים האולימפיים',
@@ -161,7 +153,7 @@ export const translations = {
     },
   },
   en: {
-    nav: { about: 'About', record: 'Record', targets: '2026 Season', gallery: 'Gallery', sponsor: 'Sponsor', contact: 'Get in Touch' },
+    nav: { about: 'About', record: 'Record', targets: 'What\'s Next', gallery: 'Gallery', sponsor: 'Sponsor', contact: 'Get in Touch' },
     hero: {
       tagline: 'Beach Volleyball | Team Israel',
       name: 'OMER GOZLAN',
@@ -221,18 +213,10 @@ export const translations = {
       progression: 'Omer keeps climbing — from youth to adult, from national cups to European championships to the world Beach Pro Tour. 2026: 7 podiums, 2 international titles, and a Pro Tour debut. Every tournament is another step toward the top of the sport.',
     },
     targets: {
-      heading: '2026 Season',
-      sub: 'The road so far — and what comes next',
+      heading: 'What\'s Next',
+      sub: 'The next stop on the road — and beyond',
       items: [
         { t: 'CEV U22 European Championship', s: 'Sep 9-13, 2026 · seeded #7', tag: 'Continental', res: 'Up Next', next: true },
-        { t: 'Battipaglia, Italy', s: 'CEV U20 European Championship · Sep 3-6, 2026', tag: 'Continental', res: '13th', href: 'https://www.cev.eu/beach/agegroups/2026/u20/' },
-        { t: 'Israel U18', s: 'National Championship · Aug 2026', tag: 'National', res: '🥇 Champion' },
-        { t: 'Israel Adults', s: 'National Championship · Aug 2026', tag: 'National', res: '🥉 Bronze' },
-        { t: 'Pingtan, China', s: 'Beach Pro Tour Futures · Aug 2026', tag: 'Pro Tour', res: '17th · Debut' },
-        { t: 'Remerchen, Luxembourg', s: 'MEVZA Zonal Tour · Aug 2026', tag: 'Continental', res: '9th' },
-        { t: 'Limassol, Cyprus', s: 'MEVZA U20 Championship · Jul 2026', tag: 'Continental', res: '🥇 Gold' },
-        { t: 'Hungary', s: 'Hungary Adults Cup · Jun 2026', tag: 'International', res: '🥈 Silver' },
-        { t: 'Cyprus', s: 'CEV Nations Cup · Pool B · May 2026', tag: 'Continental', res: '🥇 Gold', href: 'https://www.cev.eu/beach/nations-cup/2026/' },
       ],
       done_h: 'Result',
       olympic_h: '🏅 OLYMPIC GAMES',
