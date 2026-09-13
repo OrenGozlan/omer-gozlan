@@ -64,7 +64,7 @@ export const translations = {
     },
     targets: {
       heading: 'מה הבא',
-      sub: 'התחנה הבאה במסע — ומעבר לה',
+      sub: 'עונת 2026 הסתיימה — היעד: סבב Beach Pro Tour ואליפויות אירופה 2027',
       items: [
         { t: 'מדריד, ספרד', s: 'אליפות אירופה CEV U22 · 9-13 ספט 2026 · מדורג #14', tag: 'יבשתי', res: 'מקום 9', href: 'https://www.cev.eu/beach/agegroups/2026/u22/' },
       ],
@@ -160,7 +160,7 @@ export const translations = {
       name: 'OMER GOZLAN',
       sub: 'Rising Star of Israeli Beach Volleyball',
       badges: ['3x National Champion', '7x International Medalist', 'Wingate Institute'],
-      blurb: 'Israel\'s #1 U18 beach volleyball player, in the season of his life. 2026 so far: gold at the CEV Nations Cup, gold at the MEVZA U20 Championship, a third straight Israel U18 title and bronze at the Israel Adults Championship. He made his Beach Pro Tour debut in China, reached the 1/8 Finals at the U20 European Championship (#9-13) — and finished 9th at the U22 European Championship in Madrid, at 17 against players up to five years older.',
+      blurb: 'Israel\'s #1 U18 beach volleyball player, in the season of his life. 2026: gold at the CEV Nations Cup, gold at the MEVZA U20 Championship, a third straight Israel U18 title and bronze at the Israel Adults Championship. He made his Beach Pro Tour debut in China, reached the 1/8 Finals at the U20 European Championship (#9-13) — and finished 9th at the U22 European Championship in Madrid, at 17 against players up to five years older.',
       blurb_short: 'Israel\'s beach volleyball story — from Nations Cup gold to the biggest stages.',
       cta: 'Become a Partner',
       cta2: 'View Achievements',
@@ -216,7 +216,7 @@ export const translations = {
     },
     targets: {
       heading: 'What\'s Next',
-      sub: 'The next stop on the road — and beyond',
+      sub: '2026 season complete — next up: the 2027 Beach Pro Tour and European Championships',
       items: [
         { t: 'Madrid, Spain', s: 'CEV U22 European Championship · Sep 9-13, 2026 · seeded #14', tag: 'Continental', res: '9th', href: 'https://www.cev.eu/beach/agegroups/2026/u22/' },
       ],
