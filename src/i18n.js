@@ -73,10 +73,10 @@ export const translations = {
     },
     targets: {
       heading: 'מה הבא',
-      sub: 'העונה הבינלאומית של 2026 הסתיימה במדריד — עכשיו: סיום העונה בישראל ובניית לוח 2027',
+      sub: 'עונת 2026 הסתיימה במדריד — עכשיו: חורף של אימונים ובניית לוח 2027',
       items: [
-        { t: 'סיום עונת 2026 בישראל', s: 'סבב ישראל לבוגרים · סתיו 2026 · שמירה על דירוג #3 בבוגרים ובלוק אימונים לקראת 2027', tag: 'לאומי', res: 'הבא', next: true },
-        { t: 'Beach Pro Tour 2027', s: 'טורנירי Futures ו-Challenge · אירופה ואסיה · צבירת נקודות דירוג FIVB בעונה מלאה ראשונה', tag: 'סבב מקצועני', res: '2027' },
+        { t: 'חורף 2026/27 — הכנה', s: 'בלוק אימונים במכון וינגייט · כוח, טכניקה ומשחק · לקראת עונה מלאה ראשונה בסבב המקצועני', tag: 'הכנה' },
+        { t: 'Beach Pro Tour 2027', s: 'טורנירי Futures ו-Challenge · אירופה ואסיה · צבירת נקודות דירוג FIVB בעונה מלאה ראשונה', tag: 'סבב מקצועני', res: 'הבא', next: true },
         { t: 'אליפויות אירופה CEV 2027', s: 'U20 ו-U22 · מטרה: פודיום אחרי 1/8 גמר כפול ב-2026', tag: 'יבשתי', res: '2027' },
         { t: 'גביע האומות CEV 2027', s: 'בוגרים · הגנה על תואר הזהב של 2026', tag: 'יבשתי', res: '2027' },
       ],
@@ -233,10 +233,10 @@ export const translations = {
     },
     targets: {
       heading: 'What\'s Next',
-      sub: '2026 international season wrapped in Madrid — now: closing out the year at home and building the 2027 calendar',
+      sub: '2026 season wrapped in Madrid — now: a winter of training and building the 2027 calendar',
       items: [
-        { t: 'Rest of 2026 — Israel', s: 'Israel Adults Tour · Autumn 2026 · defending the #3 adults ranking and a training block toward 2027', tag: 'National', res: 'Up Next', next: true },
-        { t: 'Beach Pro Tour 2027', s: 'Futures and Challenge events · Europe and Asia · first full season of FIVB ranking points', tag: 'Pro Tour', res: '2027' },
+        { t: 'Winter 2026/27 — Preparation', s: 'Training block at the Wingate Institute · strength, technique and match play · toward a first full Pro Tour season', tag: 'Prep' },
+        { t: 'Beach Pro Tour 2027', s: 'Futures and Challenge events · Europe and Asia · first full season of FIVB ranking points', tag: 'Pro Tour', res: 'Up Next', next: true },
         { t: 'CEV European Championships 2027', s: 'U20 and U22 · target: podium after back-to-back 1/8 Finals in 2026', tag: 'Continental', res: '2027' },
         { t: 'CEV Nations Cup 2027', s: 'Adults · defending the 2026 gold', tag: 'Continental', res: '2027' },
       ],
