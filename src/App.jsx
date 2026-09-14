@@ -23,6 +23,7 @@ const GALLERY = [
   { src: P('isr-adults-medal-ceremony.jpg'), event: 'isradults', he: 'טקס הפודיום — אליפות ישראל בוגרים 2026', en: 'Podium Ceremony — Israel Adults Championship 2026' },
   { src: P('mevza-u20-dive.jpg'), event: 'mevzau20', he: 'הצלה — אליפות MEVZA U20, לימסול 2026', en: 'Dig — MEVZA U20 Championship, Limassol 2026' },
   { src: P('mevza-u20-portrait.jpg'), event: 'mevzau20', he: 'אליפות MEVZA U20 2026 — זהב', en: 'MEVZA U20 Championship 2026 — Gold' },
+  { src: P('mevza-u20-podium.jpg'), event: 'mevzau20', he: 'פודיום — אליפות MEVZA U20 2026, לימסול', en: 'Podium — MEVZA U20 Championship 2026, Limassol' },
   { src: P('mevza-u20-set.jpg'), event: 'mevzau20', he: 'מסירה — אליפות MEVZA U20 2026', en: 'Set — MEVZA U20 Championship 2026' },
   { src: P('lux-zonal-spike.jpg'), event: 'luxzonal', he: 'MEVZA Zonal Tour — רמרשן, לוקסמבורג', en: 'MEVZA Zonal Tour — Remerschen, Luxembourg' },
   { src: P('lux-zonal-dive.jpg'), event: 'luxzonal', he: 'הגנה — MEVZA Zonal Tour, לוקסמבורג', en: 'Defense — MEVZA Zonal Tour, Luxembourg' },
