@@ -180,13 +180,24 @@ function Hero({ t }) {
 function Stats({ t }) {
   return (
     <section className="py-14 md:py-16 px-6 bg-amber-50/60">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-5">
         {t.stats.map((s, i) => (
           <div key={i} className="bg-white border border-amber-200 rounded-2xl p-5 md:p-6 text-center shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
             <div className="font-display-en text-3xl md:text-5xl font-black bg-gradient-to-br from-amber-500 to-orange-600 bg-clip-text text-transparent tabular-nums leading-none mb-2">{s.n}</div>
             <div className="text-stone-700 text-xs md:text-sm font-semibold">{s.l}</div>
           </div>
         ))}
+      </div>
+      <div className="max-w-5xl mx-auto mt-8 md:mt-10">
+        <div className="text-center text-xs md:text-sm font-black tracking-widest uppercase text-stone-500 mb-4">{t.rankings_h}</div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
+          {t.rankings.map((r, i) => (
+            <div key={i} className="bg-stone-900 border border-stone-800 rounded-2xl p-4 md:p-5 text-center shadow-sm hover:border-amber-400 transition-all">
+              <div className="font-display-en text-2xl md:text-4xl font-black text-amber-400 tabular-nums leading-none mb-2">{r.n}</div>
+              <div className="text-stone-300 text-xs md:text-sm font-semibold">{r.l}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -276,12 +287,6 @@ function Targets({ t }) {
             );
           })}
         </div>
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-2xl p-8 md:p-12 text-center shadow-2xl">
-          <div className="inline-block text-xs md:text-sm font-black tracking-widest text-amber-50 mb-3">{t.targets.olympic_h}</div>
-          <h3 className="text-3xl md:text-5xl font-black text-white mb-4 hero-text">{t.targets.olympic_t}</h3>
-          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed">{t.targets.olympic_b}</p>
-        </motion.div>
         <p className="text-center text-stone-600 max-w-3xl mx-auto mt-10 italic">{t.targets.foot}</p>
       </div>
     </section>
