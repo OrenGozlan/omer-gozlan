@@ -73,9 +73,12 @@ export const translations = {
     },
     targets: {
       heading: 'מה הבא',
-      sub: 'עונת 2026 הסתיימה — היעד: סבב Beach Pro Tour ואליפויות אירופה 2027',
+      sub: 'העונה הבינלאומית של 2026 הסתיימה במדריד — עכשיו: סיום העונה בישראל ובניית לוח 2027',
       items: [
-        { t: 'מדריד, ספרד', s: 'אליפות אירופה CEV U22 · 9-13 ספט 2026 · מדורג #14', tag: 'יבשתי', res: 'מקום 9', href: 'https://www.cev.eu/beach/agegroups/2026/u22/' },
+        { t: 'סיום עונת 2026 בישראל', s: 'סבב ישראל לבוגרים · סתיו 2026 · שמירה על דירוג #3 בבוגרים ובלוק אימונים לקראת 2027', tag: 'לאומי', res: 'הבא', next: true },
+        { t: 'Beach Pro Tour 2027', s: 'טורנירי Futures ו-Challenge · אירופה ואסיה · צבירת נקודות דירוג FIVB בעונה מלאה ראשונה', tag: 'סבב מקצועני', res: '2027' },
+        { t: 'אליפויות אירופה CEV 2027', s: 'U20 ו-U22 · מטרה: פודיום אחרי 1/8 גמר כפול ב-2026', tag: 'יבשתי', res: '2027' },
+        { t: 'גביע האומות CEV 2027', s: 'בוגרים · הגנה על תואר הזהב של 2026', tag: 'יבשתי', res: '2027' },
       ],
       done_h: 'תוצאה',
       foot: 'כל תחרות היא אבן דרך לעבר היעד האולטימטיבי של עומר: לתחר ברמות הגבוהות ביותר של כדורעף החופים העולמי ולהביא גאווה לישראל.',
@@ -230,9 +233,12 @@ export const translations = {
     },
     targets: {
       heading: 'What\'s Next',
-      sub: '2026 season complete — next up: the 2027 Beach Pro Tour and European Championships',
+      sub: '2026 international season wrapped in Madrid — now: closing out the year at home and building the 2027 calendar',
       items: [
-        { t: 'Madrid, Spain', s: 'CEV U22 European Championship · Sep 9-13, 2026 · seeded #14', tag: 'Continental', res: '9th', href: 'https://www.cev.eu/beach/agegroups/2026/u22/' },
+        { t: 'Rest of 2026 — Israel', s: 'Israel Adults Tour · Autumn 2026 · defending the #3 adults ranking and a training block toward 2027', tag: 'National', res: 'Up Next', next: true },
+        { t: 'Beach Pro Tour 2027', s: 'Futures and Challenge events · Europe and Asia · first full season of FIVB ranking points', tag: 'Pro Tour', res: '2027' },
+        { t: 'CEV European Championships 2027', s: 'U20 and U22 · target: podium after back-to-back 1/8 Finals in 2026', tag: 'Continental', res: '2027' },
+        { t: 'CEV Nations Cup 2027', s: 'Adults · defending the 2026 gold', tag: 'Continental', res: '2027' },
       ],
       done_h: 'Result',
       foot: 'Each competition represents a stepping stone toward Omer\'s ultimate goal: competing at the highest levels of international beach volleyball and bringing pride to Israel.',
