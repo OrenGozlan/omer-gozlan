@@ -77,7 +77,10 @@ export const translations = {
       items: [
         { t: 'חורף 2026/27 — הכנה', s: 'בלוק אימונים במכון וינגייט · כוח, טכניקה ומשחק · לקראת עונה מלאה ראשונה בסבב המקצועני', tag: 'הכנה' },
         { t: 'Beach Pro Tour 2027', s: 'טורנירי Futures ו-Challenge · אירופה ואסיה · צבירת נקודות דירוג FIVB בעונה מלאה ראשונה', tag: 'סבב מקצועני', res: 'הבא', next: true },
-        { t: 'אליפויות אירופה CEV 2027', s: 'U20 ו-U22 · מטרה: פודיום אחרי 1/8 גמר כפול ב-2026', tag: 'יבשתי', res: '2027' },
+        { t: 'אליפות MEVZA U20 2027', s: 'הגנה על תואר הזהב של לימסול 2026', tag: 'יבשתי', res: '2027' },
+        { t: 'MEVZA Tour 2027 — בוגרים', s: 'סבב ה-Zonal של מרכז אירופה · צבירת נקודות CEV מול בוגרים', tag: 'יבשתי', res: '2027' },
+        { t: 'אליפות אירופה CEV U20 2027', s: 'מטרה: פודיום אחרי 1/8 גמר ב-2026 (#9-13)', tag: 'יבשתי', res: '2027' },
+        { t: 'אליפות אירופה CEV U22 2027', s: 'מטרה: רבע גמר ומעלה אחרי מקום 9 במדריד 2026', tag: 'יבשתי', res: '2027' },
         { t: 'גביע האומות CEV 2027', s: 'בוגרים · הגנה על תואר הזהב של 2026', tag: 'יבשתי', res: '2027' },
       ],
       done_h: 'תוצאה',
@@ -237,7 +240,10 @@ export const translations = {
       items: [
         { t: 'Winter 2026/27 — Preparation', s: 'Training block at the Wingate Institute · strength, technique and match play · toward a first full Pro Tour season', tag: 'Prep' },
         { t: 'Beach Pro Tour 2027', s: 'Futures and Challenge events · Europe and Asia · first full season of FIVB ranking points', tag: 'Pro Tour', res: 'Up Next', next: true },
-        { t: 'CEV European Championships 2027', s: 'U20 and U22 · target: podium after back-to-back 1/8 Finals in 2026', tag: 'Continental', res: '2027' },
+        { t: 'MEVZA U20 Championship 2027', s: 'Defending the Limassol 2026 gold', tag: 'Continental', res: '2027' },
+        { t: 'MEVZA Tour 2027 — Adults', s: 'Central European zonal circuit · CEV ranking points against adult fields', tag: 'Continental', res: '2027' },
+        { t: 'CEV U20 European Championship 2027', s: 'Target: podium after the 2026 1/8 Finals (#9-13)', tag: 'Continental', res: '2027' },
+        { t: 'CEV U22 European Championship 2027', s: 'Target: quarter-finals or better after 9th in Madrid 2026', tag: 'Continental', res: '2027' },
         { t: 'CEV Nations Cup 2027', s: 'Adults · defending the 2026 gold', tag: 'Continental', res: '2027' },
       ],
       done_h: 'Result',
