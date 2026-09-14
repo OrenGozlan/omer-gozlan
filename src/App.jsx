@@ -12,6 +12,22 @@ const IG_TEAM = 'beachassvolleyball';
 const HERO_IMG = P('VIK_1692.jpg');
 
 const GALLERY = [
+  // 2026 season — newest first
+  { src: P('u22-madrid-spike.jpg'), event: 'u22euro', he: 'הנחתה — אליפות אירופה U22, מדריד 2026', en: 'Attack — U22 European Championship, Madrid 2026' },
+  { src: P('u22-madrid-portrait.jpg'), event: 'u22euro', he: 'אליפות אירופה U22 — מדריד 2026', en: 'CEV U22 European Championship — Madrid 2026' },
+  { src: P('u22-madrid-block.jpg'), event: 'u22euro', he: 'חסימה — אליפות אירופה U22, מדריד', en: 'Block — U22 European Championship, Madrid' },
+  { src: P('u22-madrid-focus.jpg'), event: 'u22euro', he: 'ריכוז — אליפות אירופה U22, מדריד', en: 'Focus — U22 European Championship, Madrid' },
+  { src: P('isr-adults-night-spike.jpg'), event: 'isradults', he: 'הנחתה תחת האורות — אליפות ישראל בוגרים 2026', en: 'Night Spike — Israel Adults Championship 2026' },
+  { src: P('isr-adults-block.jpg'), event: 'isradults', he: 'חסימה — אליפות ישראל בוגרים 2026', en: 'Block — Israel Adults Championship 2026' },
+  { src: P('isr-adults-trophy.jpg'), event: 'isradults', he: 'ארד — אליפות ישראל בוגרים 2026', en: 'Bronze — Israel Adults Championship 2026' },
+  { src: P('isr-adults-medal-ceremony.jpg'), event: 'isradults', he: 'טקס הפודיום — אליפות ישראל בוגרים 2026', en: 'Podium Ceremony — Israel Adults Championship 2026' },
+  { src: P('mevza-u20-dive.jpg'), event: 'mevzau20', he: 'הצלה — אליפות MEVZA U20, לימסול 2026', en: 'Dig — MEVZA U20 Championship, Limassol 2026' },
+  { src: P('mevza-u20-portrait.jpg'), event: 'mevzau20', he: 'אליפות MEVZA U20 2026 — זהב', en: 'MEVZA U20 Championship 2026 — Gold' },
+  { src: P('mevza-u20-set.jpg'), event: 'mevzau20', he: 'מסירה — אליפות MEVZA U20 2026', en: 'Set — MEVZA U20 Championship 2026' },
+  { src: P('lux-zonal-spike.jpg'), event: 'luxzonal', he: 'MEVZA Zonal Tour — רמרשן, לוקסמבורג', en: 'MEVZA Zonal Tour — Remerschen, Luxembourg' },
+  { src: P('lux-zonal-dive.jpg'), event: 'luxzonal', he: 'הגנה — MEVZA Zonal Tour, לוקסמבורג', en: 'Defense — MEVZA Zonal Tour, Luxembourg' },
+  { src: P('lux-zonal-portrait.jpg'), event: 'luxzonal', he: 'MEVZA Zonal Tour 2026 — לוקסמבורג', en: 'MEVZA Zonal Tour 2026 — Luxembourg' },
+  { src: P('u20-euro-jersey.jpg'), event: 'u20euro', he: 'אליפות אירופה U20 2026 — איטליה', en: 'CEV U20 European Championship 2026 — Italy' },
   { src: P('VIK_1692.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
   { src: P('VIK_0434.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
   { src: P('VIK_0475.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
