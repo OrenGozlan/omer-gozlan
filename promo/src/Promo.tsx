@@ -14,6 +14,7 @@ import { Hook } from './scenes/Hook';
 import { Montage } from './scenes/Montage';
 import { Name } from './scenes/Name';
 import { Next } from './scenes/Next';
+import { Night } from './scenes/Night';
 import { Season } from './scenes/Season';
 import { Stats } from './scenes/Stats';
 import { Testimonial } from './scenes/Testimonial';
@@ -35,6 +36,7 @@ const SCENE_COMPONENTS: Record<SceneKey, () => React.JSX.Element> = {
   testimonial: Testimonial,
   next: Next,
   values: Values,
+  night: Night,
   cta: Cta,
 };
 

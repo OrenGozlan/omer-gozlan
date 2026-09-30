@@ -16,14 +16,15 @@ export const beats = (n: number): number => Math.round(n * BEAT);
 const SCENE_DURATIONS = {
   hook: beats(5), //          0.0s –  2.5s
   name: beats(7), //          2.5s –  6.0s
-  montage: beats(18), //      6.0s – 15.0s
-  credentials: beats(8), //  15.0s – 19.0s
-  stats: beats(7), //        19.0s – 22.5s
-  season: beats(26), //      22.5s – 35.5s
-  testimonial: beats(10), // 35.5s – 40.5s
-  next: beats(10), //        40.5s – 45.5s
-  values: beats(10), //      45.5s – 50.5s
-  cta: beats(10), //         50.5s – 55.5s
+  montage: beats(16), //      6.0s – 14.0s
+  credentials: beats(8), //  14.0s – 18.0s
+  stats: beats(6), //        18.0s – 21.0s
+  season: beats(25), //      21.0s – 33.5s
+  testimonial: beats(9), //  33.5s – 38.0s
+  next: beats(8), //         38.0s – 42.0s
+  values: beats(8), //       42.0s – 46.0s
+  night: beats(20), //       46.0s – 56.0s
+  cta: beats(8), //          56.0s – 60.0s
 } as const;
 
 export type SceneKey = keyof typeof SCENE_DURATIONS;
@@ -40,7 +41,7 @@ export const SCENES = SCENE_ORDER.reduce(
   {} as Record<SceneKey, SceneTiming>,
 );
 
-export const TOTAL_FRAMES = SCENES.cta.from + SCENES.cta.duration; // 1665
+export const TOTAL_FRAMES = SCENES.cta.from + SCENES.cta.duration; // 1800
 
 /** Scene-internal cues (frames from the start of that scene). */
 export const CUES = {
@@ -62,7 +63,7 @@ export const CUES = {
     zoom: beats(4), //       zoom-through into the next photo
     mask: beats(8), //       word filled with a photo, then opens up
     grid: beats(12), //      mosaic flips in, centre tile takes over
-    gridExpand: beats(15),
+    gridExpand: beats(14),
   },
   credentials: {
     badgeA: 0, //            #1 U18
@@ -80,23 +81,32 @@ export const CUES = {
     firstHit: beats(2), //   first international stop
     hitEvery: beats(2), //   one stop every two beats
     medalStagger: 8, //      home medals drop one after another
-    homeHold: beats(4), //   time on the home stop (4 domestic medals)
+    homeHold: beats(3), //   time on the home stop (4 domestic medals)
     outroLength: beats(4), //camera pulls back, tally + summary
   },
   testimonial: {
     quoteMark: 0,
     words: 6,
     wordStagger: 1.6, //     frames per word, reading order
-    author: beats(6),
+    author: beats(5.5),
   },
   next: {
     title: 0,
     firstCard: beats(1),
-    cardEvery: beats(1.5),
+    cardEvery: beats(1.2),
   },
   values: {
     firstTile: 4,
     tileEvery: beats(1),
+  },
+  night: {
+    // AI bullet-time clip (public/ai/night-bullet.mp4, Seedance from a real photo) with the real
+    // 5-frame burst flashed in at the peak. Times in AI-clip seconds, frames in scene frames.
+    aiPeak: 2.8, //          top of the jump in the AI clip → cut to the real burst here
+    aiContact: 8.35, //      arm meets ball after the frozen orbit
+    aiImpact: 8.95, //       ball hits the lens
+    burstStep: 4, //         frames per real burst photo
+    burstHold: 10, //        hold on the last burst photo before time freezes
   },
   cta: {
     headline: 0,
@@ -116,10 +126,26 @@ export const SEASON_TIMELINE = (() => {
   return { intlStops, hits, homeHit, homeDrops, outro: homeHit + c.homeHold };
 })();
 
+/**
+ * Night-spike timeline (scene-local frames): AI approach + leap → real burst flash →
+ * AI freeze / orbit / spike into the lens. Shared by the scene and the music generator.
+ */
+export const NIGHT_TIMELINE = (() => {
+  const c = CUES.night;
+  const burstStart = Math.round(c.aiPeak * FPS);
+  const changes = Array.from({ length: 5 }, (_, k) => ({ at: burstStart + k * c.burstStep, frame: k }));
+  const resume = burstStart + 5 * c.burstStep + c.burstHold; // back to the AI clip, time frozen
+  const fromAi = (sec: number) => resume + Math.round((sec - c.aiPeak) * FPS);
+  return { burstStart, changes, resume, contact: fromAi(c.aiContact), impact: fromAi(c.aiImpact), fromAi };
+})();
+
 /** Volleyball-arc transitions sit on every scene cut. */
 export const TRANSITION = {
   halfLength: 8, // frames before/after the cut the ball is on screen
-  cuts: SCENE_ORDER.slice(1).map((k) => SCENES[k].from),
+  // no ball on the cut into the CTA: the spike already smashed the ball into the lens
+  cuts: SCENE_ORDER.slice(1)
+    .filter((k) => k !== 'cta')
+    .map((k) => SCENES[k].from),
 } as const;
 
 /** Poster frame (absolute), taken from the name scene once the reveal settles. */

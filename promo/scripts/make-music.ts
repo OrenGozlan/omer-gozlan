@@ -10,7 +10,7 @@ import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { COPY } from '../src/config/copy.ts';
-import { BEAT, CUES, FPS, SCENES, SEASON_TIMELINE, TOTAL_FRAMES, TRANSITION, type SceneKey } from '../src/config/timing.ts';
+import { BEAT, CUES, FPS, NIGHT_TIMELINE, SCENES, SEASON_TIMELINE, TOTAL_FRAMES, TRANSITION, type SceneKey } from '../src/config/timing.ts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SR = 44100;
@@ -250,6 +250,20 @@ const tick = (f = 3200) => {
   }
   return x;
 };
+/** camera shutter: mirror slap + curtain, two clicks ~30ms apart */
+const shutter = () => {
+  const x = buf(0.09);
+  const hp = new Biquad('hp', 2500, 0.8);
+  const bp = new Biquad('bp', 900, 1.2);
+  for (let i = 0; i < x.length; i++) {
+    const t = i / SR;
+    const a = Math.exp(-t / 0.004);
+    const b = t > 0.032 ? Math.exp(-(t - 0.032) / 0.006) : 0;
+    x[i] = hp.p(noise()) * (a + 0.8 * b) + bp.p(noise()) * (a * 0.6 + b * 0.4);
+  }
+  return x;
+};
+
 /** coin / bell: inharmonic partials, fast attack */
 const chime = (f: number, len = 1.8) => {
   const x = buf(len);
@@ -562,6 +576,42 @@ TRANSITION.cuts.forEach((cut, i) => {
   COPY.en.next.items.forEach((_, i) => place(fx, f2t(n + CUES.next.firstCard + i * CUES.next.cardEvery), whoosh(0.3), 0.1, 0.4, 0.2));
   const v = SCENES.values.from;
   COPY.en.values.items.forEach((_, i) => place(fx, f2t(v + CUES.values.firstTile + i * CUES.values.tileEvery), tick(2200 + i * 150), 0.12, (i % 3) - 1));
+}
+
+// night spike (bullet time): groove through the approach, shutter clicks on the real burst,
+// everything drops out while time is frozen (pad + rising tension), then the spike slams back in
+{
+  const n = SCENES.night.from;
+  const T = NIGHT_TIMELINE;
+  const t0 = f2t(n);
+  const peak = f2t(n + T.burstStart);
+  // approach: kick + hats + bass on the grid up to the peak
+  for (let b = 0; t0 + b * SPB < peak; b++) {
+    const bt = t0 + b * SPB;
+    hitKick(bt);
+    place(drums, bt + 2 * S16, HAT_O, 0.16, 0.15);
+    place(drums, bt + S16, HAT_C, 0.1, -0.2);
+    place(music, bt + 2 * S16, bassNote(PROG[0].root + 12, S16 * 1.7), 0.42);
+    if (b % 2 === 1) place(drums, bt, CLAP, 0.5, 0, 0.25);
+  }
+  // peak: freeze hit + shutter burst
+  place(fx, peak, impact(), 0.42);
+  place(drums, peak, crash(2.5), 0.28, 0, 0.5);
+  T.changes.forEach((c, i) => place(fx, f2t(n + c.at), shutter(), 0.3, i % 2 ? 0.25 : -0.25, 0.15));
+  // frozen time: suspended chord, sub rumble, riser into the contact
+  const contact = f2t(n + T.contact);
+  const frozen = contact - peak;
+  const pad = supersaw(PROG[3].chord.concat(PROG[3].chord[0] + 12), frozen, { attack: 0.6, release: 0.2, cutoff: (p) => 500 + 2500 * p ** 2 });
+  placeStereo(music, peak + 0.1, pad.L, pad.R, 0.55, 0.7);
+  place(fx, contact - 2.2, riser(2.2), 0.4, 0, 0.3);
+  // snap back: the spike, the ball rocketing at the lens, the impact
+  hitKick(contact, 1.1);
+  place(drums, contact, CLAP, 0.6, 0, 0.4);
+  place(drums, contact, crash(1.5), 0.3, 0, 0.3);
+  const impactT = f2t(n + T.impact);
+  place(fx, contact, whoosh(impactT - contact + 0.05), 0.45, 0, 0.1);
+  place(fx, impactT, impact(), 0.6);
+  hitKick(impactT, 1.1);
 }
 
 // cta: lockup hit
