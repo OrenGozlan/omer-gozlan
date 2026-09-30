@@ -484,7 +484,7 @@ const writeSection = (key: SceneKey, style: Style) => {
   const h = SCENES.hook.from;
   const impactT = f2t(h + CUES.hook.impact);
   const slamT = f2t(h + CUES.hook.slam);
-  place(fx, 0, riser(impactT), 0.38, 0, 0.3);
+  place(fx, f2t(h), riser(impactT - f2t(h)), 0.38, 0, 0.3);
   place(fx, impactT, impact(), 0.55);
   place(drums, impactT, crash(1.2), 0.18, 0, 0.3);
   hitKick(slamT, 1.05);

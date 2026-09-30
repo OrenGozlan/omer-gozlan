@@ -14,16 +14,16 @@ export const BEAT = 15;
 export const beats = (n: number): number => Math.round(n * BEAT);
 
 const SCENE_DURATIONS = {
-  hook: beats(5), //          0.0s –  2.5s
-  name: beats(7), //          2.5s –  6.0s
-  montage: beats(16), //      6.0s – 14.0s
-  credentials: beats(8), //  14.0s – 18.0s
-  stats: beats(6), //        18.0s – 21.0s
-  season: beats(25), //      21.0s – 33.5s
-  testimonial: beats(9), //  33.5s – 38.0s
-  next: beats(8), //         38.0s – 42.0s
-  values: beats(8), //       42.0s – 46.0s
-  night: beats(20), //       46.0s – 56.0s
+  night: beats(20), //        0.0s – 10.0s  cold open: bullet-time spike into the lens
+  hook: beats(5), //         10.0s – 12.5s  …the promo proper starts from black
+  name: beats(7), //         12.5s – 16.0s
+  montage: beats(16), //     16.0s – 24.0s
+  credentials: beats(8), //  24.0s – 28.0s
+  stats: beats(6), //        28.0s – 31.0s
+  season: beats(25), //      31.0s – 43.5s
+  testimonial: beats(9), //  43.5s – 48.0s
+  next: beats(8), //         48.0s – 52.0s
+  values: beats(8), //       52.0s – 56.0s
   cta: beats(8), //          56.0s – 60.0s
 } as const;
 
@@ -142,9 +142,9 @@ export const NIGHT_TIMELINE = (() => {
 /** Volleyball-arc transitions sit on every scene cut. */
 export const TRANSITION = {
   halfLength: 8, // frames before/after the cut the ball is on screen
-  // no ball on the cut into the CTA: the spike already smashed the ball into the lens
+  // no ball on the cut out of the cold open: the spike already smashed the ball into the lens
   cuts: SCENE_ORDER.slice(1)
-    .filter((k) => k !== 'cta')
+    .filter((k) => k !== 'hook')
     .map((k) => SCENES[k].from),
 } as const;
 

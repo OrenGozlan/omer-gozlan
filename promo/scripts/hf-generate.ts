@@ -91,8 +91,13 @@ const run = async (name: string) => {
   const status = result.status as string;
   writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify({ request_id: result.request_id, status, video: result.video?.url ?? null }, null, 2));
   if (status !== 'completed' || !result.video?.url) {
-    // failed, nsfw (moderated) or canceled — never report these as success
-    throw new Error(`[${name}] request ${result.request_id} ended with status "${status}"${result.video?.url ? '' : ', no video returned'}`);
+    // failed, nsfw (moderated) or canceled — never report these as success. The SDK drops the
+    // API's error text, so fetch it (e.g. "Your credit balance is too low…").
+    const detail = await fetch(`${API}/requests/${result.request_id}/status`, { headers: { Authorization: `Key ${credentials}` } })
+      .then((r) => r.json() as Promise<{ error?: string }>)
+      .then((j) => j.error)
+      .catch(() => undefined);
+    throw new Error(`[${name}] request ${result.request_id} ended with status "${status}"${detail ? `: ${detail}` : ''}`);
   }
   const raw = path.join(outDir, `${name}-raw.mp4`);
   const video = await fetch(result.video.url);
