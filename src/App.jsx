@@ -36,6 +36,8 @@ const GALLERY = [
   { src: P('VIK_0507.jpg'), event: 'cev2026', he: 'גביע אומות CEV 2026', en: 'CEV Nations Cup 2026' },
   { src: P('VIK_8913.JPG'), event: 'hungary', he: 'גביע לאומי הונגריה 2026', en: 'Hungary National Cup 2026' },
   { src: P('VIK_8968.JPG'), event: 'hungary', he: 'גביע לאומי הונגריה 2026', en: 'Hungary National Cup 2026' },
+  // 2025
+  { src: P('emek-hefer-award-2025.jpg'), event: 'award', he: 'ספורטאי מצטיין בעמק חפר 2025', en: 'Outstanding Athlete of Emek Hefer 2025' },
   { src: P('european-championship.jpg'), event: 'euro', he: 'אליפות אירופה', en: 'European Championship' },
   { src: P('cyprus-bronze.jpg'), event: 'euro', he: 'מדליית ארד קפריסין', en: 'Cyprus Bronze Medal' },
   { src: P('slovenia-cev.jpg'), event: 'euro', he: 'CEV סלובניה', en: 'Slovenia CEV' },

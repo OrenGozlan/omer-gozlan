@@ -34,19 +34,19 @@ see `src/config/formats.ts`.
 
 | # | Scene | Seconds | Content |
 |---|---|---|---|
-| 1 | Hook | 0–2.5 | black → sun flare → ball hits sand (shockwave, dust) → **ISRAEL'S #1** slam |
-| 2 | Name | 2.5–6 | **OMER GOZLAN** letter stagger; 3-plane parallax (clean plate / athlete cutout / type) |
-| 3 | Montage | 6–14 | hero subline "Rising Star of Israeli Beach Volleyball": strips → zoom-through + flare → word-as-window text mask + iris → 3×3 mosaic, centre tile takes over |
-| 4 | Credentials | 14–18 | slot-reel badges **#1 U18**, **#1 U20**, then both + "Israel U18 & U20 Rank" |
-| 5 | Stats | 18–21 | counters: 11 podiums 2024-26 · 7× international medalist · 3× national champion |
-| 6 | 2026 medals route | 21–33.5 | tilted dot-map; flight through all 8 international stops in date order; per-stop event-photo cards; medal coins; live podium tally; home leg with the 4 domestic medals; pull-back summary |
-| 7 | Testimonial | 33.5–38 | Wingate director quote, lit word by word |
-| 8 | What's Next | 38–42 | 2027 targets from the site, cards fly in from depth |
-| 9 | Why partner | 42–46 | the six sponsor value props as photo tiles |
-| 10 | Night Spike | 46–56 | bullet time: AI approach + take-off → the **real** 5-frame burst flashed in at the peak (event caption) → AI frozen 180° orbit → spike straight into the lens, shake, flash |
+| 1 | Night Spike (cold open) | 0–10 | bullet time, no text: AI approach + take-off → the **real** 5-frame burst flashed in at the peak → AI frozen 180° orbit → spike straight into the lens, shake, flash |
+| 2 | Hook | 10–12.5 | from black → sun flare → ball hits sand (shockwave, dust) → **ISRAEL'S #1** slam |
+| 3 | Name | 12.5–16 | **OMER GOZLAN** letter stagger; 3-plane parallax (clean plate / athlete cutout / type) |
+| 4 | Montage | 16–24 | hero subline "Rising Star of Israeli Beach Volleyball": strips → zoom-through + flare → word-as-window text mask + iris → 3×3 mosaic, centre tile takes over |
+| 5 | Credentials | 24–28 | slot-reel badges **#1 U18**, **#1 U20**, then both + "Israel U18 & U20 Rank" |
+| 6 | Stats | 28–31 | counters: 11 podiums 2024-26 · 7× international medalist · 3× national champion |
+| 7 | 2026 medals route | 31–43.5 | tilted dot-map; flight through all 8 international stops in date order; per-stop event-photo cards; medal coins; live podium tally; home leg with the 4 domestic medals; pull-back summary |
+| 8 | Testimonial | 43.5–48 | Wingate director quote, lit word by word |
+| 9 | What's Next | 48–52 | 2027 targets from the site, cards fly in from depth |
+| 10 | Why partner | 52–56 | the six sponsor value props as photo tiles |
 | 11 | CTA | 56–60 | "Partnership inquiries open", email + IG, OG lockup, 1s static hold |
 
-A volleyball arc crosses every scene cut except into the CTA (the spike already hits the lens).
+A volleyball arc crosses every scene cut except out of the cold open (the spike already hits the lens).
 
 ## AI footage (Higgsfield · Seedance 2.5)
 
@@ -62,8 +62,7 @@ brief, condensed (the full 1.4k-character text fails for clips longer than 5s). 
   id + status are written to `out/ai/<clip>.json`.
 - `--duration=N --resolution=720p|1080p` override a clip's defaults.
 - Timeline markers in the AI clip (peak / contact / impact) live in `CUES.night` in `timing.ts`.
-- The event caption is shown only over the real burst photos, not over the AI footage. Meta/TikTok/
-  YouTube ask for an "AI-generated" label on realistic synthetic footage when posting.
+- Meta/TikTok/YouTube ask for an "AI-generated" label on realistic synthetic footage when posting.
 
 ## Retiming
 
@@ -86,7 +85,6 @@ All strings are in `src/config/copy.ts`, each with its source:
   results have no exact dates on the site, so they're shown together on the home leg at the end
 - Testimonial — `i18n.en.testimonial`; What's Next — `i18n.en.targets` (5 of the 8 items);
   Why partner — `i18n.en.sponsor.items`
-- Night Spike — gallery caption in `src/App.jsx` ("Night Spike — Israel Adults Championship 2026")
 - Contact — `src/App.jsx` (`EMAIL`, `IG_OMER`)
 
 Scene 4 deliberately does **not** use the `og:description` list (CEV Bulgaria, Volleyball World
