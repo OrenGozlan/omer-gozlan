@@ -80,6 +80,7 @@ function Nav({ t, lang, toggle }) {
     ['record', t.nav.record],
     ['targets', t.nav.targets],
     ['gallery', t.nav.gallery],
+    ['video', t.nav.video],
     ['sponsor', t.nav.sponsor],
   ];
 
@@ -214,6 +215,32 @@ function Stats({ t }) {
               <div className="text-stone-300 text-xs md:text-sm font-semibold">{r.l}</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const PORTRAIT_PHONE = '(max-width: 767px) and (orientation: portrait)';
+
+function PromoVideo({ t }) {
+  const [tall, setTall] = useState(() => window.matchMedia(PORTRAIT_PHONE).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(PORTRAIT_PHONE);
+    const onChange = (e) => setTall(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+  const v = tall ? '9x16' : '16x9';
+  return (
+    <section id="video" className="py-20 md:py-24 px-6 bg-gradient-to-b from-amber-50/60 to-white">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="font-display-en text-4xl md:text-6xl font-black uppercase tracking-tight text-center text-amber-800 mb-3">{t.promo.heading}</h2>
+        <p className="text-center text-stone-600 mb-10">{t.promo.sub}</p>
+        <div className={`mx-auto overflow-hidden rounded-2xl shadow-2xl ring-1 ring-amber-200 bg-stone-900 ${tall ? 'aspect-[9/16] max-w-sm' : 'aspect-video'}`}>
+          <video key={v} className="w-full h-full" controls playsInline preload="none" poster={`${B}video/promo-${v}-poster.jpg`}>
+            <source src={`${B}video/promo-${v}.mp4`} type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
@@ -509,6 +536,7 @@ export default function App() {
         <StickyCTA t={t} />
       <Hero t={t} />
       <Stats t={t} />
+      <PromoVideo t={t} />
       <About t={t} />
       <Record t={t} />
       <Targets t={t} />

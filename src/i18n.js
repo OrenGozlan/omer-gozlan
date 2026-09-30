@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 export const translations = {
   he: {
-    nav: { about: 'אודות', record: 'הישגים', targets: 'מה הבא', gallery: 'גלריה', sponsor: 'חסות', contact: 'צרו קשר' },
+    nav: { about: 'אודות', record: 'הישגים', targets: 'מה הבא', gallery: 'גלריה', video: 'סרטון', sponsor: 'חסות', contact: 'צרו קשר' },
     hero: {
       tagline: 'כדורעף חופים | נבחרת ישראל',
       name: 'עומר גוזלן',
@@ -13,6 +13,7 @@ export const translations = {
       cta: 'הצטרפו כשותפים',
       cta2: 'צפו בהישגים',
     },
+    promo: { heading: 'צפו בסרטון', sub: 'עונת 2026 ב-55 שניות' },
     stats: [
       { n: '17', l: 'גיל' },
       { n: '#1', l: 'דירוג ישראל U18 ו-U20' },
@@ -166,7 +167,7 @@ export const translations = {
     },
   },
   en: {
-    nav: { about: 'About', record: 'Record', targets: 'What\'s Next', gallery: 'Gallery', sponsor: 'Sponsor', contact: 'Get in Touch' },
+    nav: { about: 'About', record: 'Record', targets: 'What\'s Next', gallery: 'Gallery', video: 'Video', sponsor: 'Sponsor', contact: 'Get in Touch' },
     hero: {
       tagline: 'Beach Volleyball | Team Israel',
       name: 'OMER GOZLAN',
@@ -177,6 +178,7 @@ export const translations = {
       cta: 'Become a Partner',
       cta2: 'View Achievements',
     },
+    promo: { heading: 'Watch', sub: 'The 2026 season in 55 seconds' },
     stats: [
       { n: '17', l: 'Years Old' },
       { n: '#1', l: 'Israel U18 & U20 Rank' },
