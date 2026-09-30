@@ -13,7 +13,7 @@ export const translations = {
       cta: 'הצטרפו כשותפים',
       cta2: 'צפו בהישגים',
     },
-    promo: { heading: 'צפו בסרטון', sub: 'עונת 2026 ב-55 שניות' },
+    promo: { heading: 'צפו בסרטון', sub: 'עונת 2026 ב-60 שניות' },
     stats: [
       { n: '17', l: 'גיל' },
       { n: '#1', l: 'דירוג ישראל U18 ו-U20' },
@@ -178,7 +178,7 @@ export const translations = {
       cta: 'Become a Partner',
       cta2: 'View Achievements',
     },
-    promo: { heading: 'Watch', sub: 'The 2026 season in 55 seconds' },
+    promo: { heading: 'Watch', sub: 'The 2026 season in 60 seconds' },
     stats: [
       { n: '17', l: 'Years Old' },
       { n: '#1', l: 'Israel U18 & U20 Rank' },

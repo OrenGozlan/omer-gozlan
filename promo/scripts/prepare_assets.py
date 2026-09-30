@@ -63,7 +63,11 @@ PICKS = {
     "v-story": "championship-focus.jpg",
     "v-longterm": "team-partnership.jpg",
 }
-CUTOUTS = ["name-wide", "name-tall"]
+CUTOUTS = ["name-wide", "name-tall", "night-5"]
+
+# night-spike burst (5 consecutive frames) — full-res originals from the Drive album
+DRIVE = Path.home() / "oren.gozlan@gmail.com - Google Drive/My Drive/Beach VolleyBall/ISR Adults 2026"
+BURST = [f"2S4A420{i}.jpg" for i in range(1, 6)]
 
 
 def copy_photos() -> None:
@@ -73,6 +77,23 @@ def copy_photos() -> None:
         im.thumbnail((2600, 2600), Image.LANCZOS)
         im.save(PHOTOS / f"{slot}.jpg", quality=90)
         print(f"{slot}.jpg {im.size}")
+
+
+def copy_burst() -> None:
+    for i, src in enumerate(BURST, start=1):
+        im = ImageOps.exif_transpose(Image.open(DRIVE / src)).convert("RGB")
+        im.thumbnail((1700, 2600), Image.LANCZOS)
+        im.save(PHOTOS / f"night-{i}.jpg", quality=88)
+        print(f"night-{i}.jpg {im.size}")
+    # start frame for the AI bullet-time clip (scripts/hf-generate.ts): Omer #1 at the net, partner setting
+    court = ImageOps.exif_transpose(Image.open(DRIVE / "2S4A4215.jpg")).convert("RGB")
+    court = court.crop((0, 420, 6000, 420 + 3375)).resize((2560, 1440), Image.LANCZOS)
+    court.save(PHOTOS / "night-court.jpg", quality=92)
+    print("night-court.jpg (2560, 1440)")
+    omer = ImageOps.exif_transpose(Image.open(DRIVE / "2S4A4215.jpg")).convert("RGB")
+    omer = omer.crop((0, 950, 2250, 3950)).resize((1500, 2000), Image.LANCZOS)
+    omer.save(PHOTOS / "night-court-omer.jpg", quality=92)
+    print("night-court-omer.jpg (1500, 2000)")
 
 
 def cutouts() -> None:
@@ -134,6 +155,7 @@ def textures() -> None:
 
 if __name__ == "__main__":
     copy_photos()
+    copy_burst()
     cutouts()
     clean_plates()
     textures()

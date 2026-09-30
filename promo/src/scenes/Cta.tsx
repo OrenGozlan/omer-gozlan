@@ -82,8 +82,7 @@ export const Cta = () => {
         {/* contact */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, transform: `translateY(${(1 - contact) * 60}px)`, opacity: contact }}>
           <div style={{ width: r(680, 600) * rule, height: 3, background: COLORS.amber, borderRadius: 3 }} />
-          <div style={{ fontFamily: FONTS.body, fontWeight: 800, fontSize: r(50, 46), color: COLORS.amber, letterSpacing: '0.01em' }}>{copy.cta.url}</div>
-          <div style={{ display: 'flex', flexDirection: r('row', 'column'), alignItems: 'center', gap: r(36, 10), fontFamily: FONTS.body, fontWeight: 600, fontSize: r(36, 38), color: COLORS.white }}>
+          <div style={{ display: 'flex', flexDirection: r('row', 'column'), alignItems: 'center', gap: r(36, 10), fontFamily: FONTS.body, fontWeight: 700, fontSize: r(44, 44), color: COLORS.white }}>
             <span>{copy.cta.email}</span>
             {r(<span style={{ color: COLORS.amber }}>·</span>, null)}
             <span>{copy.cta.instagram}</span>

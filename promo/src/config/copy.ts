@@ -47,7 +47,8 @@ export type Copy = {
   testimonial: { quote: string; author: string; role: string };
   next: { heading: string; year: string; items: { t: string; s: string; tag: string }[] };
   values: { items: { t: string; d: string; photo: string }[] };
-  cta: { headline: string; url: string; email: string; instagram: string; wordmark: string; monogram: string; tagline: string };
+  night: { title: string; caption: string };
+  cta: { headline: string; email: string; instagram: string; wordmark: string; monogram: string; tagline: string };
 };
 
 export const COPY: Record<'en', Copy> = {
@@ -139,10 +140,14 @@ export const COPY: Record<'en', Copy> = {
         { t: 'Long-term Partnership', d: 'Grow together as Omer advances to professional international competition', photo: 'v-longterm' },
       ],
     },
+    night: {
+      // src/App.jsx GALLERY caption: "Night Spike — Israel Adults Championship 2026"
+      title: 'Night Spike',
+      caption: 'Israel Adults Championship 2026',
+    },
     cta: {
       // index.html og:description: "Partnership inquiries open."
       headline: 'Partnership inquiries open',
-      url: 'orengozlan.github.io/omer-gozlan',
       email: 'oren.gozlan@gmail.com',
       instagram: '@g0zlan_',
       wordmark: 'OMER GOZLAN',

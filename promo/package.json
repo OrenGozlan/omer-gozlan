@@ -12,9 +12,11 @@
     "build:map": "node scripts/build-map-dots.mjs",
     "typecheck": "tsc --noEmit",
     "frames": "node scripts/check-frames.ts",
-    "music": "node scripts/make-music.ts"
+    "music": "node scripts/make-music.ts",
+    "hf": "node --env-file=.env.local scripts/hf-generate.ts"
   },
   "dependencies": {
+    "@higgsfield/client": "^0.2.6",
     "@remotion/bundler": "^4.0.529",
     "@remotion/cli": "^4.0.529",
     "@remotion/google-fonts": "^4.0.529",
